@@ -26,6 +26,8 @@ import subprocess
 import sys
 import urllib.request
 
+MAX_SLOW = 1.25  # max slow-motion factor allowed to fit a longer hold into a fixed clip
+
 
 def run(cmd):
     p = subprocess.run(cmd, capture_output=True, text=True)
@@ -122,14 +124,21 @@ def main(argv):
             continue
         cdur = probe(src, "v:0")
         start = float(s.get("in", 0.3))
+        slow = 1.0
         if start + s["dur"] > cdur + 0.05:
-            raise SystemExit(f"shot {i}: trim window {start:.2f}+{s['dur']:.2f}s exceeds source clip "
-                             f"{cdur:.2f}s: fix useful_window or regenerate a longer clip")
+            # Fit a longer hold (e.g. after a narration re-time) without new footage:
+            # 1) start the trim earlier (>= 0.05 s), 2) gentle slow-motion capped at MAX_SLOW.
+            start = max(0.05, cdur - s["dur"])
+            if start + s["dur"] > cdur + 0.05:
+                slow = s["dur"] / (cdur - start)
+                if slow > MAX_SLOW:
+                    raise SystemExit(f"shot {i}: hold {s['dur']:.2f}s needs {slow:.2f}x slow-motion on a "
+                                     f"{cdur:.2f}s clip (max {MAX_SLOW}x): split the shot or regenerate")
         if cdur < 3.9:
             print(f"WARN shot {i}: source clip {cdur:.2f}s is shorter than the 4 s Seedance minimum",
                   file=sys.stderr)
         pad = 0.1  # frame-rounding safety only
-        vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={fps},setsar=1,"
+        vf = (f"setpts=PTS*{slow:.4f}," if slow > 1.0 else "") + (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={fps},setsar=1,"
               f"tpad=stop_mode=clone:stop_duration={pad:.2f}")
         label = re.sub(r"[^A-Za-z0-9 ]", "", s.get("label") or "").upper().strip()
         if labels and label and font:
@@ -153,6 +162,7 @@ def main(argv):
                  "-t", f"{frames/fps:.3f}", wav])
         aud_list.append(wav)
         print(f"shot {i:02d}: source {cdur:.2f}s -> edited in {start:.2f}s dur {frames/fps:.2f}s"
+              f"{f'  slow {slow:.2f}x' if slow > 1.0 else ''}"
               f"{'  diegetic' if s.get('diegetic') else ''}{'  label ' + label if label else ''}",
               file=sys.stderr)
 
