@@ -1,0 +1,4 @@
+{"img:flare:high:2k": 2.75, "img:sunburst:high:2k": 2.75, "img:flare:xhigh:2k": 4.5,
+ "vid:4s:1080p:final:audio=false": 48, "vid:4s:480p:draft:audio=false": 12, "vid:4s:480p:draft:audio=true": 12,
+ "vid:4s:1080p:final:audio=true": 48, "vid:5s:1080p:final:audio=false": 60,
+ "tts:ch1": 1.6, "tts:ch2": 1.6, "tts:ch3": 1.6, "tts:ch4": 1.8, "tts:ch5": 1.7}

@@ -253,6 +253,9 @@ Measured targets enforced on **final edited** durations:
   - xhigh for the hook and payoff;
   - `medias:[{role:"image_references", value:<avatar stage ref>}, {role:"image_references", value:<chapter establishing frame>}]`.
 - `DIRECT_VIDEO` and `REUSE_REFERENCE` shots get **no** new image.
+- A chapter-opener shot whose keyframe *is* its Phase-4 establishing frame sets
+  `"keyframe_is_establishing": true`. It is not generated again, and `cost_plan.py` does not
+  bill it twice.
 
 ### Phase 7: Shots (Seedance 2.5)
 
@@ -264,8 +267,12 @@ One `generate_video_batch` item per shot (≤ 12 per call):
 - **Media by `visual_source`:**
   - `KEYFRAME_REQUIRED`: `mode: "omni_reference"`, `medias:[{role:"start_image", value:<keyframe>}]`.
   - `DIRECT_VIDEO`: `mode: "omni_reference"`, `medias:[{role:"image_references", value:<avatar stage ref>}, {role:"image_references", value:<chapter establishing frame>}]`.
-  - `REUSE_REFERENCE`: `mode: "omni_reference"`, with the `reuse_of` asset as `start_image`
-    (keyframe) or `image_references` (prop/env), plus the avatar stage ref.
+  - `REUSE_REFERENCE`: `mode: "omni_reference"`, plus the avatar stage ref. Set the shot's
+    `reuse_mode`:
+    - `"start_image"`: only when the reused frame already shows the **same avatar stage and
+      composition**;
+    - `"image_references"` otherwise, e.g. returning to an earlier location at a later age.
+      This keeps a newborn-era frame from opening an adult-era shot.
 - **Prompt:** put the action inside `useful_window` (E1) and use the camera vocabulary from
   `references/visual-language.md`. Diegetic shots also describe the sound and add "no speech,
   no music".

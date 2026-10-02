@@ -1,0 +1,36 @@
+metric                             measured   target
+duration_s                             57.4   50–60
+shots                                    22   ≈0.4/s (20–26 @55s)
+mean_edited_hold_s                     2.61   2.2–2.8
+pct_shots_le_3s                          95   ≥85%
+max_edited_hold_s (excl. final)         2.8   ≤4.0
+final_edited_shot_s                     4.6   ≤5.0
+cuts_per_10s                           3.66   3.5–4.5
+hook_words                               13   10–14
+hook_opener                            True   'What (would happen) if you…'
+chapter_count                             5   5
+first_stamp_s                           2.4   1.5–3.0
+ch1_onset_pct                             4   4±6
+ch2_onset_pct                            17   17±6
+ch3_onset_pct                            35   37±6
+ch4_onset_pct                            53   57±6
+ch5_onset_pct                            74   75±6
+final_chapter_s                        14.8   12–17
+words_per_sec                          3.97   3.6–4.2
+max_words_per_shot                       13   ≤16
+pct_medium_family                        64   60–80
+pct_wide                                 23   10–30
+pct_close                                14   5–15
+scale_change_rate                      0.71   ≥0.66
+no_cta                                 True   no CTA
+pct_avatar_in_frame                     100   ≥95
+max_gap_between_interrupts_s           12.4   ≤15
+plant_in_first_15pct                   True   plant ≤15%
+payoff_on_final_shot                   True   final shot tagged payoff
+turn_in_ch4_or_5                       True   turn tag in ch4/5
+keyframe_required_shots            10 (45%)   only where control is needed; <=60%
+direct_video / reuse_reference        6 / 6   —
+diegetic_audio_shots                      1   default 0; generate_audio true only on these
+
+
+0 FAIL, 0 WARN, 29 OK

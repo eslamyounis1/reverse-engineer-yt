@@ -28,7 +28,9 @@ def image_jobs(plan):
     """(key, params, count, what) for every planned GPT Image 2.5 job."""
     n_stages = len(plan.get("avatar", {}).get("spec", {}).get("stage_changes", [])) or 5
     shots = plan["shots"]
-    kf = [s for s in shots if s.get("visual_source") == "KEYFRAME_REQUIRED"]
+    # Chapter-opener shots whose keyframe IS the Phase-4 establishing frame are not billed twice.
+    kf = [s for s in shots if s.get("visual_source") == "KEYFRAME_REQUIRED"
+          and not s.get("keyframe_is_establishing")]
     hero = [s for s in kf if set(s.get("tags", [])) & {"hook", "payoff"}]
     jobs = [
         ("img:flare:high:2k", {"variant": "flare", "quality": "high", "resolution": "2k"}, 1, "avatar base reference"),
@@ -77,7 +79,10 @@ def narration_jobs(plan):
     out = []
     for ch, lines in chapters.items():
         text = " ".join(l for l in lines if l)
-        params = {"model": TTS, "prompt": text, "speech_rate": 25, "get_cost": True}
+        v = plan.get("voice", {})
+        params = {"model": TTS, "prompt": text, "speech_rate": v.get("speech_rate", 25), "get_cost": True}
+        if v.get("voice_id"):
+            params.update({"voice_type": v.get("voice_type", "preset"), "voice_id": v["voice_id"]})
         out.append((f"tts:ch{ch}", "generate_audio", params, 1, f"narration take, chapter {ch} ({len(text.split())} words)"))
     return out
 

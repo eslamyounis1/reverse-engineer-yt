@@ -1,0 +1,872 @@
+{
+ "title": "What If You Were Born on Mars in 2100?",
+ "premise_type": "lifespan",
+ "target_seconds": 55,
+ "voice": {
+  "model": "seed_audio",
+  "voice_type": "preset",
+  "voice_id": "bd072316-f77c-588b-b6e5-e46b9b03d008",
+  "name": "Archie (user-selected)",
+  "speech_rate": 25
+ },
+ "avatar": {
+  "name": "pip",
+  "design": "small knitted-wool doll figure in cream wool with visible stitch texture, oversized glossy green enamel button eyes, sunflower-yellow pom-pom beanie",
+  "spec": {
+   "silhouette": "compact rounded figure: big round head under a sunflower-yellow pom-pom beanie, soft pear-shaped body, short stubby limbs; reads instantly at thumbnail size",
+   "proportions": "head 1/3 of height as newborn, 1/4 as child, 1/5 as teen and adult; button eyes about 1/3 of face width",
+   "materials": "cream knitted wool with visible stitch rows, slightly fuzzy edges, glossy green enamel buttons for eyes, small stitched curved mouth in brown thread",
+   "clothing": "permanent accent: sunflower-yellow knitted pom-pom beanie (never in any background); per-chapter garments in stage_changes",
+   "identifying_features": [
+    "glossy green enamel button eyes",
+    "sunflower-yellow pom-pom beanie",
+    "brown stitched curved mouth",
+    "one darker cream darning patch on the left cheek"
+   ],
+   "stage_changes": [
+    {
+     "chapter": 1,
+     "age": "newborn",
+     "clothing": "silver thermal swaddle + beanie",
+     "state": "pristine, fluffy wool"
+    },
+    {
+     "chapter": 2,
+     "age": "child (6)",
+     "clothing": "cut-down orange colony jumpsuit; outdoors a small orange pressure suit with a polycarbonate bubble helmet",
+     "state": "wool slightly fuzzed at elbows"
+    },
+    {
+     "chapter": 3,
+     "age": "teen (14)",
+     "clothing": "patched grey utility coveralls, dust goggles pushed up on the beanie",
+     "state": "red dust worked into the wool edges"
+    },
+    {
+     "chapter": 4,
+     "age": "adult (22)",
+     "clothing": "navy travel jacket with a plain round mission patch, shoulder bag",
+     "state": "neat, freshly washed wool, hopeful"
+    },
+    {
+     "chapter": 5,
+     "age": "adult (30)",
+     "clothing": "green greenhouse apron over coveralls, soil-stained hands",
+     "state": "beanie faded, a few repair stitches in yellow thread, settled and calm"
+    }
+   ]
+  },
+  "reference": {
+   "job_id": null,
+   "approved_by_user": false,
+   "stage_refs": {}
+  },
+  "stages": [
+   "newborn",
+   "child",
+   "teen",
+   "adult22",
+   "adult30"
+  ]
+ },
+ "signature_prop": "dented tin cup holding an apple seed sent from Earth (seed -> sapling -> tree -> new seed)",
+ "cost_preflight": {
+  "image": 50.25,
+  "video": 1128.0,
+  "narration": 8.3,
+  "total": 1186.55,
+  "contingency_20pct": 237.31,
+  "currency": "credits",
+  "lines": [
+   {
+    "group": "image",
+    "what": "avatar base reference",
+    "count": 1,
+    "unit": 2.75,
+    "cost": 2.75
+   },
+   {
+    "group": "image",
+    "what": "avatar stage frames (edits of the approved reference)",
+    "count": 5,
+    "unit": 2.75,
+    "cost": 13.75
+   },
+   {
+    "group": "image",
+    "what": "signature prop",
+    "count": 1,
+    "unit": 2.75,
+    "cost": 2.75
+   },
+   {
+    "group": "image",
+    "what": "chapter establishing keyframes",
+    "count": 5,
+    "unit": 2.75,
+    "cost": 13.75
+   },
+   {
+    "group": "image",
+    "what": "KEYFRAME_REQUIRED scene keyframes",
+    "count": 3,
+    "unit": 2.75,
+    "cost": 8.25
+   },
+   {
+    "group": "image",
+    "what": "hook + payoff keyframes",
+    "count": 2,
+    "unit": 4.5,
+    "cost": 9.0
+   },
+   {
+    "group": "video",
+    "what": "4s source clips, final, audio=False",
+    "count": 20,
+    "unit": 48,
+    "cost": 960
+   },
+   {
+    "group": "video",
+    "what": "4s source clips, draft, audio=False",
+    "count": 4,
+    "unit": 12,
+    "cost": 48
+   },
+   {
+    "group": "video",
+    "what": "4s source clips, draft, audio=True",
+    "count": 1,
+    "unit": 12,
+    "cost": 12
+   },
+   {
+    "group": "video",
+    "what": "4s source clips, final, audio=True",
+    "count": 1,
+    "unit": 48,
+    "cost": 48
+   },
+   {
+    "group": "video",
+    "what": "5s source clips, final, audio=False",
+    "count": 1,
+    "unit": 60,
+    "cost": 60
+   },
+   {
+    "group": "narration",
+    "what": "narration take, chapter 1 (45 words)",
+    "count": 1,
+    "unit": 1.6,
+    "cost": 1.6
+   },
+   {
+    "group": "narration",
+    "what": "narration take, chapter 2 (43 words)",
+    "count": 1,
+    "unit": 1.6,
+    "cost": 1.6
+   },
+   {
+    "group": "narration",
+    "what": "narration take, chapter 3 (42 words)",
+    "count": 1,
+    "unit": 1.6,
+    "cost": 1.6
+   },
+   {
+    "group": "narration",
+    "what": "narration take, chapter 4 (44 words)",
+    "count": 1,
+    "unit": 1.8,
+    "cost": 1.8
+   },
+   {
+    "group": "narration",
+    "what": "narration take, chapter 5 (52 words)",
+    "count": 1,
+    "unit": 1.7,
+    "cost": 1.7
+   }
+  ],
+  "approved_by_user": false
+ },
+ "notes": [
+  "Timings are pre-narration estimates; Phase 5 retimes them to Whisper word timestamps.",
+  "dur = final edited hold; gen_duration = Seedance source clip (>=4s), trimmed to useful_window.",
+  "Hook contains 'year 2100' inside the question; the validator treats it as premise, not a chapter stamp."
+ ],
+ "chapters": [
+  {
+   "n": 1,
+   "label": "Day one",
+   "world": "buried habitat nursery, warm amber",
+   "event": "birth under regolith; 12-minute delay; seed gift (plant)"
+  },
+  {
+   "n": 2,
+   "label": "Year six",
+   "world": "underground school + crater rim, cool white then blue sunset",
+   "event": "low gravity; first walk outside; blue sunset"
+  },
+  {
+   "n": 3,
+   "label": "Year fourteen",
+   "world": "global dust storm, rust light + red emergency",
+   "event": "storm, power rationing, digging out greenhouse; sapling"
+  },
+  {
+   "n": 4,
+   "label": "Year twenty-two",
+   "world": "launch hall, pale morning -> red alert",
+   "event": "seat on Earth ship; failed medical scan; ship leaves (turn)"
+  },
+  {
+   "n": 5,
+   "label": "Year thirty",
+   "world": "greenhouse dome, lush green + blue sunset",
+   "event": "apple tree; new baby; new seed; reframing payoff"
+  }
+ ],
+ "sources": [
+  "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+  "https://en.wikipedia.org/wiki/Timekeeping_on_Mars",
+  "https://www.swri.org/newsroom/press-releases/swri-scientists-publish-first-radiation-measurements-the-surface-of-mars",
+  "https://www.jpl.nasa.gov/news/mars-sunset-clip-from-opportunity-tells-dusty-tale/",
+  "https://en.wikipedia.org/wiki/2018_Mars_global_dust_storm",
+  "https://ntrs.nasa.gov/api/citations/20220013418/downloads/ASCEND-Communication%20Delays,%20Disruptions,%20and%20Blackouts%20for%20Crewed%20Mars%20Missions.pdf",
+  "https://en.wikipedia.org/wiki/Launch_window",
+  "https://www.sciencedirect.com/science/article/pii/S3117347026000751"
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "chapter": 0,
+   "start": 0.0,
+   "dur": 2.4,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.3
+   ],
+   "line": "What would happen if you were born on Mars in the year 2100?",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "newborn",
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "hook frame: premise + avatar identity (xhigh)",
+   "refs": [
+    "avatar:stage:newborn",
+    "env:ch1"
+   ],
+   "audio": "none",
+   "environment": "buried habitat nursery, curved regolith-brick walls, small porthole showing red dust blowing outside, warm amber lamps",
+   "camera": "push-in",
+   "action": "newborn avatar in a padded incubator pod opens its button eyes as red dust streaks past the porthole",
+   "difficult": false,
+   "tags": [
+    "hook"
+   ]
+  },
+  {
+   "id": 2,
+   "chapter": 1,
+   "start": 2.4,
+   "dur": 2.4,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.3
+   ],
+   "line": "Day one. You're born under three metres of dirt that blocks radiation.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "newborn",
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "chapter 1 opener: habitat design",
+   "keyframe_is_establishing": true,
+   "refs": [
+    "avatar:stage:newborn",
+    "env:ch1"
+   ],
+   "audio": "none",
+   "environment": "cutaway of habitat dome buried under red regolith mounds, warm interior light, rocky crater outside",
+   "camera": "locked",
+   "action": "a parent in a grey colony jumpsuit lifts the swaddled newborn as soil trickles on the dome roof",
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 3,
+   "chapter": 1,
+   "start": 4.8,
+   "dur": 2.4,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.3
+   ],
+   "line": "Your first cry reaches Earth twelve minutes later.",
+   "scale": "Medium Close-Up",
+   "avatar": true,
+   "avatar_stage": "newborn",
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "diegetic UI: signal-delay counter '12:00' on comms screen",
+   "refs": [
+    "avatar:stage:newborn",
+    "env:ch1"
+   ],
+   "audio": "none",
+   "environment": "comms alcove, glowing screen with a transmission bar and delay counter reading 12:00",
+   "camera": "locked",
+   "action": "the newborn wails in the foreground while a signal bar crawls across the screen behind",
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 4,
+   "chapter": 1,
+   "start": 7.2,
+   "dur": 2.6,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.5
+   ],
+   "line": "Earth sends back a gift: an apple seed in a tin cup.",
+   "scale": "Close-Up",
+   "avatar": true,
+   "avatar_stage": "newborn",
+   "visual_source": "REUSE_REFERENCE",
+   "reuse_of": "prop:seedcup",
+   "reuse_mode": "image_references",
+   "refs": [
+    "avatar:stage:newborn",
+    "env:ch1",
+    "prop:seedcup"
+   ],
+   "audio": "none",
+   "environment": "habitat nursery shelf, warm lamp",
+   "camera": "push-in",
+   "action": "tiny wool hand reaches and touches a dented tin cup holding one apple seed in dark soil",
+   "difficult": false,
+   "tags": [
+    "plant"
+   ]
+  },
+  {
+   "id": 5,
+   "chapter": 2,
+   "start": 9.8,
+   "dur": 2.6,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.5
+   ],
+   "line": "Year six. You weigh just over a third of an Earth kid.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "child",
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "chapter 2 opener: underground school tunnel",
+   "keyframe_is_establishing": true,
+   "refs": [
+    "avatar:stage:child",
+    "env:ch2"
+   ],
+   "audio": "none",
+   "environment": "underground school tunnel, padded walls, painted planet murals, cool white strip lights",
+   "camera": "locked",
+   "action": "six-year-old avatar steps onto a floor scale whose needle barely moves; classmates giggle behind",
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 6,
+   "chapter": 2,
+   "start": 12.4,
+   "dur": 2.4,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.3
+   ],
+   "line": "Every jump in the school tunnel becomes a slow, floating flight.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "child",
+   "visual_source": "DIRECT_VIDEO",
+   "refs": [
+    "avatar:stage:child",
+    "env:ch2"
+   ],
+   "audio": "none",
+   "environment": "same school tunnel",
+   "camera": "low tracking",
+   "action": "the child leaps and floats in a long slow arc over a line of laughing classmates",
+   "difficult": true,
+   "tags": [
+    "interrupt"
+   ]
+  },
+  {
+   "id": 7,
+   "chapter": 2,
+   "start": 14.8,
+   "dur": 2.6,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.5
+   ],
+   "line": "Outside, without a suit, the thin air would boil your blood.",
+   "scale": "Medium Close-Up",
+   "avatar": true,
+   "avatar_stage": "child",
+   "visual_source": "DIRECT_VIDEO",
+   "refs": [
+    "avatar:stage:child",
+    "env:ch2"
+   ],
+   "audio": "none",
+   "environment": "airlock chamber, red warning light, pressure gauge",
+   "camera": "push-in",
+   "action": "the child in a small orange pressure suit seals a bubble helmet as the airlock light turns from red to green",
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 8,
+   "chapter": 2,
+   "start": 17.4,
+   "dur": 2.8,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.7
+   ],
+   "line": "The noon sky is butterscotch. The sunsets glow blue.",
+   "scale": "Wide",
+   "avatar": true,
+   "avatar_stage": "child",
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "composition: tiny suited child silhouetted against a blue Martian sunset",
+   "refs": [
+    "avatar:stage:child",
+    "env:ch2"
+   ],
+   "audio": "none",
+   "environment": "crater rim at dusk, cold blue glow around a small pale sun, butterscotch sky above, long shadows",
+   "camera": "locked",
+   "action": "the suited child stands on the crater rim as the sun sinks and the blue halo spreads",
+   "difficult": false,
+   "tags": [
+    "interrupt"
+   ]
+  },
+  {
+   "id": 9,
+   "chapter": 3,
+   "start": 20.2,
+   "dur": 2.6,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.5
+   ],
+   "line": "Year fourteen. A dust storm swallows the whole planet for months.",
+   "scale": "Wide",
+   "avatar": true,
+   "avatar_stage": "teen",
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "chapter 3 opener: planet-wide dust storm wall",
+   "keyframe_is_establishing": true,
+   "refs": [
+    "avatar:stage:teen",
+    "env:ch3"
+   ],
+   "audio": "none",
+   "environment": "habitat observation window, a towering brown dust wall rolling across the plain, light dimming to rust",
+   "camera": "locked",
+   "action": "the teen avatar presses a hand to the window as the dust wall swallows the horizon",
+   "difficult": true,
+   "tags": [
+    "interrupt"
+   ]
+  },
+  {
+   "id": 10,
+   "chapter": 3,
+   "start": 22.8,
+   "dur": 2.4,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.3
+   ],
+   "line": "The solar panels go dark. The colony rations every watt.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "teen",
+   "visual_source": "DIRECT_VIDEO",
+   "refs": [
+    "avatar:stage:teen",
+    "env:ch3"
+   ],
+   "audio": "none",
+   "environment": "habitat corridor under red emergency lighting, dust-caked solar panels visible through a porthole",
+   "camera": "locked",
+   "action": "the teen switches off lamps one by one as the corridor drops into red emergency light",
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 11,
+   "chapter": 3,
+   "start": 25.2,
+   "dur": 2.6,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.5
+   ],
+   "line": "You dig the greenhouse out by hand, sol after sol.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "teen",
+   "visual_source": "DIRECT_VIDEO",
+   "refs": [
+    "avatar:stage:teen",
+    "env:ch3"
+   ],
+   "audio": "none",
+   "environment": "outside the greenhouse dome in swirling brown dust, half-buried dome",
+   "camera": "handheld",
+   "action": "the teen in a dusty pressure suit shovels drifts away from the greenhouse door",
+   "difficult": true,
+   "tags": [
+    "montage"
+   ]
+  },
+  {
+   "id": 12,
+   "chapter": 3,
+   "start": 27.8,
+   "dur": 2.4,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.3
+   ],
+   "line": "Your seed is now a sapling, the only green for kilometres.",
+   "scale": "Close-Up",
+   "avatar": true,
+   "avatar_stage": "teen",
+   "visual_source": "REUSE_REFERENCE",
+   "reuse_of": "prop:seedcup",
+   "reuse_mode": "image_references",
+   "refs": [
+    "avatar:stage:teen",
+    "env:ch3",
+    "prop:seedcup"
+   ],
+   "audio": "none",
+   "environment": "greenhouse bench under dim red grow-light",
+   "camera": "push-in",
+   "action": "hard colour flip: after the rust-red storm, a vivid green apple sapling glows under the grow-light in the tin cup as the teen's gloved hand cups it",
+   "difficult": false,
+   "tags": [
+    "interrupt"
+   ]
+  },
+  {
+   "id": 13,
+   "chapter": 4,
+   "start": 30.2,
+   "dur": 2.6,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.5
+   ],
+   "line": "Year twenty-two. You finally win a seat on the ship to Earth.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "adult22",
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "chapter 4 opener: launch hall with ship on the pad",
+   "keyframe_is_establishing": true,
+   "refs": [
+    "avatar:stage:adult22",
+    "env:ch4"
+   ],
+   "audio": "none",
+   "environment": "launch hall with a tall window, a silver passenger rocket on the pad outside, pale morning light",
+   "camera": "locked",
+   "action": "the adult avatar raises a glowing boarding token and grins at the rocket outside",
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 14,
+   "chapter": 4,
+   "start": 32.8,
+   "dur": 2.4,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.3
+   ],
+   "line": "Launch windows open every twenty-six months. You've waited years.",
+   "scale": "Wide",
+   "avatar": true,
+   "avatar_stage": "adult22",
+   "visual_source": "DIRECT_VIDEO",
+   "refs": [
+    "avatar:stage:adult22",
+    "env:ch4"
+   ],
+   "audio": "none",
+   "environment": "launch hall crowd with luggage, departure board glowing, rocket through the window",
+   "camera": "locked",
+   "action": "colonists stream toward a boarding gate while the avatar waits in line clutching a bag",
+   "difficult": true,
+   "tags": []
+  },
+  {
+   "id": 15,
+   "chapter": 4,
+   "start": 35.2,
+   "dur": 2.4,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.3
+   ],
+   "line": "Then the medical scan flashes red.",
+   "scale": "Medium Close-Up",
+   "avatar": true,
+   "avatar_stage": "adult22",
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "diegetic UI: medical scanner panel flashing red 'NOT CLEARED'",
+   "refs": [
+    "avatar:stage:adult22",
+    "env:ch4"
+   ],
+   "audio": "none",
+   "environment": "medical scan booth, scanner arch, red alert panel",
+   "camera": "push-in",
+   "action": "the avatar stands in the scanner arch as the panel flashes red and its smile fades",
+   "difficult": false,
+   "tags": [
+    "turn",
+    "interrupt"
+   ]
+  },
+  {
+   "id": 16,
+   "chapter": 4,
+   "start": 37.6,
+   "dur": 2.6,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.5
+   ],
+   "line": "You grew up in Mars gravity. On Earth, you'd weigh almost triple.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "adult22",
+   "visual_source": "DIRECT_VIDEO",
+   "refs": [
+    "avatar:stage:adult22",
+    "env:ch4"
+   ],
+   "audio": "none",
+   "environment": "clinic room with a gravity-simulator harness",
+   "camera": "locked",
+   "action": "in a gravity simulator, the avatar's knees buckle and it grips the handrails, straining",
+   "difficult": false,
+   "tags": [
+    "turn"
+   ]
+  },
+  {
+   "id": 17,
+   "chapter": 4,
+   "start": 40.2,
+   "dur": 2.4,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.3
+   ],
+   "line": "The ship leaves without you.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "adult22",
+   "visual_source": "REUSE_REFERENCE",
+   "reuse_of": "keyframe:shot13",
+   "reuse_mode": "start_image",
+   "refs": [
+    "avatar:stage:adult22",
+    "env:ch4"
+   ],
+   "audio": "diegetic",
+   "environment": "the same launch hall window, rocket lifting off on a pillar of flame",
+   "camera": "locked",
+   "action": "the avatar presses a palm to the window as the rocket rises and the hall trembles",
+   "difficult": true,
+   "tags": [],
+   "audio_note": "muffled rocket rumble and window tremble sells the departure; no speech, no music"
+  },
+  {
+   "id": 18,
+   "chapter": 5,
+   "start": 42.6,
+   "dur": 2.6,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.5
+   ],
+   "line": "Year thirty. You run the largest garden on Mars.",
+   "scale": "Wide",
+   "avatar": true,
+   "avatar_stage": "adult30",
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "chapter 5 opener: lush greenhouse dome",
+   "keyframe_is_establishing": true,
+   "refs": [
+    "avatar:stage:adult30",
+    "env:ch5"
+   ],
+   "audio": "none",
+   "environment": "huge greenhouse dome, terraced green rows, misting sprinklers, red cliffs beyond the dome",
+   "camera": "locked",
+   "action": "the adult avatar walks a row of crops with a watering can, mist drifting in shafts of light",
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 19,
+   "chapter": 5,
+   "start": 45.2,
+   "dur": 2.4,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.3
+   ],
+   "line": "The seed from Earth is now a tree taller than you.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "adult30",
+   "visual_source": "REUSE_REFERENCE",
+   "reuse_of": "keyframe:shot18",
+   "reuse_mode": "image_references",
+   "refs": [
+    "avatar:stage:adult30",
+    "env:ch5",
+    "prop:seedcup"
+   ],
+   "audio": "none",
+   "environment": "the same greenhouse, a young apple tree at its centre",
+   "camera": "push-in",
+   "action": "the avatar reaches up and picks a red apple from the tree",
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 20,
+   "chapter": 5,
+   "start": 47.6,
+   "dur": 2.6,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.5
+   ],
+   "line": "Then a baby is born in the nursery where you were born.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "adult30",
+   "visual_source": "REUSE_REFERENCE",
+   "reuse_of": "keyframe:shot1",
+   "reuse_mode": "image_references",
+   "refs": [
+    "avatar:stage:adult30",
+    "env:ch5"
+   ],
+   "audio": "none",
+   "environment": "the same nursery and incubator pod from the hook, warm amber lamps",
+   "camera": "locked",
+   "action": "the avatar leans over the incubator as a newborn's hand grips its wool finger",
+   "difficult": false,
+   "tags": [
+    "interrupt"
+   ]
+  },
+  {
+   "id": 21,
+   "chapter": 5,
+   "start": 50.2,
+   "dur": 2.6,
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.5
+   ],
+   "line": "You plant a new seed in a tin cup.",
+   "scale": "Close-Up",
+   "avatar": true,
+   "avatar_stage": "adult30",
+   "visual_source": "REUSE_REFERENCE",
+   "reuse_of": "prop:seedcup",
+   "reuse_mode": "image_references",
+   "refs": [
+    "avatar:stage:adult30",
+    "env:ch5",
+    "prop:seedcup"
+   ],
+   "audio": "none",
+   "environment": "nursery shelf beside the incubator",
+   "camera": "locked",
+   "action": "the avatar's hands press an apple seed into soil in a fresh tin cup",
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 22,
+   "chapter": 5,
+   "start": 52.8,
+   "dur": 4.6,
+   "gen_duration": 5,
+   "useful_window": [
+    0.3,
+    5
+   ],
+   "line": "You were never an Earthling on Mars. You're the first Martian.",
+   "scale": "Wide",
+   "avatar": true,
+   "avatar_stage": "adult30",
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "payoff frame: prop callback in final tableau (xhigh)",
+   "refs": [
+    "avatar:stage:adult30",
+    "env:ch5"
+   ],
+   "audio": "none",
+   "environment": "greenhouse dome at blue sunset, apple tree behind, red plains and the blue-haloed sun beyond",
+   "camera": "push-in",
+   "action": "the avatar looks up at a tiny blue dot (Earth) in the dusk sky, then lifts the tin cup with the new seed toward it, the apple tree glowing behind",
+   "difficult": false,
+   "tags": [
+    "payoff"
+   ]
+  }
+ ]
+}
