@@ -86,7 +86,7 @@
   "23": "a9bfdcb3-eb98-4b52-85d8-a34873dd2f68",
   "24": "ac09c8a3-17ac-4273-9fd7-b6086e09a55a",
   "25": "ba35eb3a-273e-4522-a6ea-826e5e3be657",
-  "26": "STILL:2f79ee68-bd3f-4fbf-b9d9-1e1753aa06ce"
+  "26": "dd9776ce-41a4-423c-beb3-d75cc0349136"
  },
  "credits_spent": {
   "images": 50.25,
@@ -106,14 +106,16 @@
   "13": "3f0ce2bc-cc59-4feb-b777-cf8361377698",
   "15": "8031312b-22ae-4ab3-9bae-b1374b917cfc",
   "18": "2a027d8d-583d-4be3-97d0-0c97e25bb3b9",
-  "21": "0cc1340c-3864-40e1-9c40-dae98c5a56c7"
+  "21": "0cc1340c-3864-40e1-9c40-dae98c5a56c7",
+  "26": "cf6c26c5-56b3-42a5-8704-e0c55008dab8"
  },
  "rejected": {
   "26_nsfw_false_positive": "e43a5370-a769-4b1f-aabe-5d9a2438cffb",
   "26_nsfw_retry1": "6b9eae45-6d69-4705-a02e-d9bae94c769f",
   "26_nsfw_retry2": "2f5e2c51-0fe9-48e2-91d1-7653162b00c2",
   "26_nsfw_retry3": "752c88ac-579e-428b-a85c-759594d44de7",
-  "26_nsfw_retry4": "30417e06-5f68-4a08-8d9a-42072b72f5d0"
+  "26_nsfw_retry4": "30417e06-5f68-4a08-8d9a-42072b72f5d0",
+  "26_daylight_pullback_draft_nsfw": "0d7cdf43-4399-42e4-93bc-7a3124aff938"
  },
  "first_cut": {
   "media_id": "aa922a56-7460-4825-a730-009a7d35c255",
@@ -133,8 +135,15 @@
  "credits": {
   "balance_start": 3584.16,
   "balance_after_first_cut": 2256.71,
-  "spent": 1327.45,
+  "spent": 1402.45,
   "approved_estimate": 1186.85,
-  "approved_allowance": 237.37
+  "approved_allowance": 237.37,
+  "balance_after_v2": 2181.71
+ },
+ "cut_v2": {
+  "media_id": "86e4788d-2a07-4f76-b245-e7f3af6ccec3",
+  "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/86e4788d-2a07-4f76-b245-e7f3af6ccec3.mp4",
+  "change": "shot 26 replaced: daylight Seedance clip (Pip sets tin cup by apple tree, looks up) instead of still push-in",
+  "duration_s": 59.93
  }
 }
