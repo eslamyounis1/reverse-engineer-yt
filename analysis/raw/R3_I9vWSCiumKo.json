@@ -1,0 +1,27 @@
+{
+  "ref": "R3",
+  "video_id": "I9vWSCiumKo",
+  "url": "https://www.youtube.com/watch?v=I9vWSCiumKo",
+  "higgsfield_analysis_id": "3c193cde-a28f-465e-b0ef-ed310060104f",
+  "timestamp_convention": "exclusive",
+  "note": "First job c989f0eb stuck in queue; resubmitted via /shorts/ URL. Label field ignored. Scenes 6, 12 and 16 are described as containing internal quick cuts, so true cut count is >= 19.",
+  "internal_extra_cuts": 3,
+  "scenes": [
+    {"n":1,"start":0,"end":2,"shot":"Medium","audio":"What would happen if you were born as a slave in ancient Rome?","visual":"Translucent glassy skeleton with large expressive eyes, loincloth, pulled by two hooded armored guards on deck of wooden sailing ship in violent storm; cold blue dramatic light; ocean spray."},
+    {"n":2,"start":2,"end":5,"shot":"Medium","audio":"Day one, you wake up on a wooden ship while chained men row through rough water.","visual":"Same skeleton lying distressed on deck; three muscular chained men rowing huge oars behind; handheld camera mimicking boat rocking."},
+    {"n":3,"start":5,"end":7,"shot":"Wide","audio":"Guards shout as waves slam the sides and the boat rocks hard.","visual":"Wide: ship in massive waves; skeleton slides across wet deck; guards struggle for footing; dark moody, saturated blue/white."},
+    {"n":4,"start":7,"end":9,"shot":"Medium","audio":"When land appears, you are dragged off and counted with the others.","visual":"Skeleton on pier tied to thick rope, wide-eyed; stone castle and misty harbor behind; overcast grey light."},
+    {"n":5,"start":9,"end":11,"shot":"Medium Close-Up","audio":"Year five, you are thrown into a training yard and told to fight older slaves.","visual":"Skeleton now in brown vest and leather bracers in dusty sunlit training yard; guard with staff behind; skeleton cowers defensively."},
+    {"n":6,"start":11,"end":14,"shot":"Wide","audio":"Your arms shake as wooden weapons knock you to the ground again and again.","visual":"Series of quick cuts: skeleton knocked down repeatedly by wooden staff in sandy arena; fighters practicing behind; dust clouds; warm sun."},
+    {"n":7,"start":14,"end":16,"shot":"Medium","audio":"You stand up every time because stopping means worse.","visual":"Skeleton struggles up in sand holding chest; fatigued, bruised; wooden practice sword stuck in ground behind."},
+    {"n":8,"start":16,"end":18,"shot":"Medium","audio":"Year 15, you train every day until your body reacts without thinking.","visual":"Skeleton now more muscular, hand-to-hand with large human; blocks punch and counters; fast fluid motion."},
+    {"n":9,"start":18,"end":21,"shot":"Medium","audio":"You block strikes, push back, and stay on your feet longer each fight.","visual":"Skeleton punches stone wall, dust flies; intense focus and anger; slaves and instructors watch."},
+    {"n":10,"start":21,"end":24,"shot":"Close-Up","audio":"Instructors stop hitting you first and start watching instead.","visual":"Static shot: skeleton stands tall, looks directly into camera with menacing grin; glassy skin reflects hard sunlight."},
+    {"n":11,"start":24,"end":27,"shot":"Wide","audio":"Year 25, you enter the Colosseum as gates open and noise crashes down from above.","visual":"Skeleton in leather armor walks through massive stone gate into packed Colosseum; eyes glow bright orange."},
+    {"n":12,"start":27,"end":30,"shot":"Medium","audio":"Sometimes animals are released, sometimes the floor is flooded and fighters struggle to stay upright.","visual":"Skeleton dodges charging bull in dust; next cut: fighting gladiators on flooded arena floor, water splashing."},
+    {"n":13,"start":30,"end":33,"shot":"Medium Close-Up","audio":"You survive one fight, then another, then many more.","visual":"Skeleton victorious center arena holding metal helmet; body scratched and grimy; cheering crowd; strong top light."},
+    {"n":14,"start":33,"end":37,"shot":"Medium","audio":"Year 30, you step into the arena knowing this fight decides everything.","visual":"Skeleton heavily scarred, one-shoulder metal armor, fighting stance facing off-screen opponent; glowing orange eyes."},
+    {"n":15,"start":37,"end":40,"shot":"Wide","audio":"You trade blows until your opponent drops and waits for the signal.","visual":"From behind skeleton looking up at balcony where emperor figure in white toga gives thumbs-up; opponent kneeling in dust."},
+    {"n":16,"start":40,"end":45,"shot":"Medium","audio":"When the order comes, you act, and the crowd roars as your chains are finally removed.","visual":"Skeleton stands triumphant; broken iron chains fall from wrists to sand; arms raised, crowd blurs; final close-up on smiling face, orange eye-glow intensifying."}
+  ]
+}

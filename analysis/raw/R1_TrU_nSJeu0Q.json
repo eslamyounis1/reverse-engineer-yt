@@ -1,0 +1,25 @@
+{
+  "ref": "R1",
+  "video_id": "TrU_nSJeu0Q",
+  "url": "https://www.youtube.com/watch?v=TrU_nSJeu0Q",
+  "higgsfield_analysis_id": "8bd8eeae-d0e7-476f-b118-05485297051a",
+  "timestamp_convention": "exclusive",
+  "note": "First job 947daa98 (watch?v= URL) stuck in queue; resubmitted via /shorts/ URL. Label field ignored. Scene 1 audio includes hook + 'Day one.'",
+  "scenes": [
+    {"n":1,"start":0,"end":2,"shot":"Medium","audio":"What would happen if you were raised by a billionaire? Day one.","visual":"Transparent glass skeleton baby with large wide eyes sits in luxurious crib with satin sheets, holding large rainbow lollipop; chef in white uniform in grand dining room with crystal chandelier and big windows behind."},
+    {"n":2,"start":2,"end":5,"shot":"Wide","audio":"You wake up in a mansion with more rooms than you can count. A private chef brings breakfast to your nursery on a silver platter.","visual":"Same glass skeleton baby in crib as chef presents silver platter of fruit and juice; opulent nursery, gold trim, chandelier, tall curtains; baby reaches for food."},
+    {"n":3,"start":5,"end":8,"shot":"Medium","audio":"Your custom crib costs more than most cars. Everything appears before you want it.","visual":"Maid in black/white uniform helps baby into gold-and-marble high chair; second maid opens curtains; warm bright light on reflective surfaces."},
+    {"n":4,"start":8,"end":12,"shot":"Wide","audio":"Year ten. You attend the most exclusive private school where everyone's parents are famous.","visual":"Teen glass skeleton in white polo, beige pants, backpack walks through prestigious historic courtyard; students in blazers, security in suits; fountain; bright sun."},
+    {"n":5,"start":12,"end":15,"shot":"Wide","audio":"Your dad buys you a real Formula One car modified for kids as a gift.","visual":"Teen skeleton in high-end garage of luxury cars; man in grey suit beside small-scale F1 car; skeleton excited, gesturing; cool overhead light."},
+    {"n":6,"start":15,"end":18,"shot":"Medium","audio":"You race it around your private track whenever you want.","visual":"Skeleton in racing suit and helmet driving the F1 car; camera positioned in front of car as it speeds down track; motion blur in background."},
+    {"n":7,"start":18,"end":21,"shot":"Wide","audio":"Life feels like pure endless fun.","visual":"Skeleton on golden carousel horse at private fairground; Ferris wheel and mansion behind; smiling as it spins; golden-hour light."},
+    {"n":8,"start":21,"end":24,"shot":"Medium","audio":"Year 20. You live in a penthouse throwing massive parties every weekend.","visual":"Adult glass skeleton in patterned shirt dances in crowded high-end penthouse/nightclub; neon blue/pink light; cheering crowd with drinks."},
+    {"n":9,"start":24,"end":27,"shot":"Medium","audio":"You buy a new Lamborghini and it arrives the same day.","visual":"Skeleton in aviator sunglasses, smirking, in front of lime-green supercar with scissor doors up; dark sleek garage, spotlight on car."},
+    {"n":10,"start":27,"end":30,"shot":"Wide","audio":"You wake up in a different country every week. You've never been happier in your life.","visual":"Skeleton relaxes barefoot in private-jet leather seat holding cocktail; windows show island and turquoise ocean; flight attendant behind."},
+    {"n":11,"start":30,"end":33,"shot":"Medium","audio":"Year 30. You're sitting alone in your mansion surrounded by supercars you don't drive.","visual":"On-screen 'Year 30'. Skeleton on high-rise balcony at night over city skyline; lonely, contemplative; grey sweater, gold watch; bokeh city lights."},
+    {"n":12,"start":33,"end":37,"shot":"Medium","audio":"Your friends only call when they need something. You've never worked for anything or built something yourself.","visual":"Skeleton on dark leather sofa in dim room staring at phone showing missed calls; whiskey bottle on table; slumped, depressed."},
+    {"n":13,"start":37,"end":42,"shot":"Wide","audio":"Year 40. You opened a dog shelter and work there cleaning kennels every day.","visual":"On-screen 'Year 40'. Skeleton at dog shelter in red flannel and brown apron, kneeling, petting golden retriever; family watching; bright kennel room."},
+    {"n":14,"start":42,"end":46,"shot":"Medium","audio":"The dogs don't care about your bank account or your last name. You're happier scrubbing floors than you ever were buying mansions.","visual":"Skeleton sits on floor covered by puppies licking and climbing; warm glowing light emanates from its chest."},
+    {"n":15,"start":46,"end":50,"shot":"Wide","audio":"You finally found something money can't buy. Purpose.","visual":"Skeleton on wooden porch of building with shelter sign at dusk, petting dog with one hand, holding the rainbow lollipop from the first scene in the other; soft peaceful light."}
+  ]
+}

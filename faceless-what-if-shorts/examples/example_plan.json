@@ -1,0 +1,412 @@
+{
+ "title": "Born at the bottom of the ocean",
+ "premise_type": "lifespan",
+ "target_seconds": 55,
+ "avatar": {
+  "name": "birch",
+  "design": "hand-carved pale birch marionette, oversized glossy black bead eyes, visible brass pin joints, single teal knitted scarf as accent",
+  "stages": [
+   "newborn",
+   "child",
+   "teen",
+   "adult"
+  ]
+ },
+ "signature_prop": "small brass compass whose needle always points to the surface",
+ "notes": [
+  "Example plan only. Timings are pre-narration estimates; Phase 4 retimes them to word timestamps."
+ ],
+ "chapters": [
+  {
+   "n": 1,
+   "label": "Day one",
+   "world": "station nursery and corridors, dim teal + red alarm",
+   "event": "birth under pressure; compass gifted"
+  },
+  {
+   "n": 2,
+   "label": "Year six",
+   "world": "airlock and open seafloor, cold blue lamp light",
+   "event": "first swim outside; giant creature"
+  },
+  {
+   "n": 3,
+   "label": "Year sixteen",
+   "world": "cargo sub in the trench, green instrument glow",
+   "event": "pilots alone; trusted by crew"
+  },
+  {
+   "n": 4,
+   "label": "Year thirty",
+   "world": "command deck, red alert",
+   "event": "station shutdown; fear of the sky (turn)"
+  },
+  {
+   "n": 5,
+   "label": "Year thirty-one",
+   "world": "ascent from black to blue to blinding sun",
+   "event": "surfacing; compass stops (payoff)"
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "chapter": 0,
+   "start": 0,
+   "dur": 2.4,
+   "line": "What would happen if you were born at the bottom of the ocean?",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "newborn",
+   "environment": "station medical bay, porthole full of dark water and drifting jellyfish",
+   "camera": "locked",
+   "action": "newborn marionette swaddled in a hammock as a pressure alarm light pulses red",
+   "keyframe": true,
+   "difficult": false,
+   "tags": [
+    "hook"
+   ]
+  },
+  {
+   "id": 2,
+   "chapter": 1,
+   "start": 2.4,
+   "dur": 2.4,
+   "line": "Day one. Your first window shows no sky, only black water.",
+   "scale": "Close-Up",
+   "avatar": true,
+   "avatar_stage": "newborn",
+   "environment": "nursery porthole, bioluminescent jellyfish",
+   "camera": "push-in",
+   "action": "tiny wooden hand presses the porthole glass as a jellyfish drifts close",
+   "keyframe": false,
+   "difficult": false,
+   "tags": [
+    "plant"
+   ]
+  },
+  {
+   "id": 3,
+   "chapter": 1,
+   "start": 4.8,
+   "dur": 2.6,
+   "line": "The crew gives you a brass compass that always points up.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "newborn",
+   "environment": "cramped galley, crew in grey jumpsuits",
+   "camera": "locked",
+   "action": "a crew member places a brass compass in the baby's lap; the needle swings upward",
+   "keyframe": true,
+   "difficult": false,
+   "tags": [
+    "plant"
+   ]
+  },
+  {
+   "id": 4,
+   "chapter": 1,
+   "start": 7.4,
+   "dur": 2.4,
+   "line": "Every bolt in the walls groans when the pressure shifts.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "newborn",
+   "environment": "steel corridor, condensation, dim teal light",
+   "camera": "handheld",
+   "action": "the corridor shudders, droplets fall, the hammock sways",
+   "keyframe": false,
+   "difficult": false,
+   "tags": [
+    "interrupt"
+   ]
+  },
+  {
+   "id": 5,
+   "chapter": 2,
+   "start": 9.8,
+   "dur": 2.6,
+   "line": "Year six. School is a flooded airlock and a diving suit too big.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "child",
+   "environment": "airlock chamber filling with water",
+   "camera": "locked",
+   "action": "child marionette in an oversized brass dive helmet waddles into rising water",
+   "keyframe": true,
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 6,
+   "chapter": 2,
+   "start": 12.4,
+   "dur": 2.8,
+   "line": "On your first swim outside, the station lights vanish behind you.",
+   "scale": "Wide",
+   "avatar": true,
+   "avatar_stage": "child",
+   "environment": "open seafloor, station lights fading behind",
+   "camera": "behind follow",
+   "action": "the child swims away from the station into darkness, lamp beam cutting the water",
+   "keyframe": false,
+   "difficult": true,
+   "tags": []
+  },
+  {
+   "id": 7,
+   "chapter": 2,
+   "start": 15.2,
+   "dur": 2.2,
+   "line": "Something enormous passes beneath you.",
+   "scale": "Wide",
+   "avatar": true,
+   "avatar_stage": "child",
+   "environment": "open water, giant silhouette below",
+   "camera": "locked",
+   "action": "a colossal squid silhouette glides under the tiny swimmer",
+   "keyframe": true,
+   "difficult": true,
+   "tags": [
+    "interrupt"
+   ]
+  },
+  {
+   "id": 8,
+   "chapter": 2,
+   "start": 17.4,
+   "dur": 2.4,
+   "line": "You tell no one. You just hold the compass tighter.",
+   "scale": "Medium Close-Up",
+   "avatar": true,
+   "avatar_stage": "child",
+   "environment": "inside helmet, fogged glass",
+   "camera": "push-in",
+   "action": "wooden fingers clench the brass compass, needle trembling",
+   "keyframe": false,
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 9,
+   "chapter": 3,
+   "start": 19.8,
+   "dur": 2.6,
+   "line": "Year sixteen. You pilot the cargo sub alone through the trench.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "teen",
+   "environment": "cockpit of a small sub, instrument glow",
+   "camera": "front-mounted",
+   "action": "teen marionette grips the controls as rock walls rush past the canopy",
+   "keyframe": true,
+   "difficult": true,
+   "tags": []
+  },
+  {
+   "id": 10,
+   "chapter": 3,
+   "start": 22.4,
+   "dur": 2.6,
+   "line": "Sonar pings hit things that aren't on any map.",
+   "scale": "Medium Close-Up",
+   "avatar": true,
+   "avatar_stage": "teen",
+   "environment": "cockpit, green sonar screen",
+   "camera": "locked",
+   "action": "sonar screen fills with unknown shapes; the teen leans in",
+   "keyframe": false,
+   "difficult": false,
+   "tags": [
+    "interrupt"
+   ]
+  },
+  {
+   "id": 11,
+   "chapter": 3,
+   "start": 25.0,
+   "dur": 2.4,
+   "line": "You patch a cracked hull with shaking hands.",
+   "scale": "Close-Up",
+   "avatar": true,
+   "avatar_stage": "teen",
+   "environment": "engine room, spraying leak",
+   "camera": "handheld",
+   "action": "wooden hands press a sealant patch over a hissing crack",
+   "keyframe": false,
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 12,
+   "chapter": 3,
+   "start": 27.4,
+   "dur": 2.6,
+   "line": "The crew starts calling you before they call the captain.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "teen",
+   "environment": "control room, crew turning toward the teen",
+   "camera": "locked",
+   "action": "crew members turn toward the teen as an alarm board blinks",
+   "keyframe": false,
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 13,
+   "chapter": 4,
+   "start": 30.0,
+   "dur": 2.6,
+   "line": "Year thirty. The surface sends word: the station is shutting down.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "adult",
+   "environment": "command deck, red alert light, message on screen",
+   "camera": "locked",
+   "action": "adult marionette reads a glowing evacuation notice, red light washing the deck",
+   "keyframe": true,
+   "difficult": false,
+   "tags": [
+    "turn",
+    "interrupt"
+   ]
+  },
+  {
+   "id": 14,
+   "chapter": 4,
+   "start": 32.6,
+   "dur": 2.6,
+   "line": "Everyone you know packs for a world you've only seen in pictures.",
+   "scale": "Wide",
+   "avatar": true,
+   "avatar_stage": "adult",
+   "environment": "docking bay crowded with crates and departing crew",
+   "camera": "locked",
+   "action": "crew carry crates toward an escape capsule; the marionette stands still among them",
+   "keyframe": false,
+   "difficult": true,
+   "tags": []
+  },
+  {
+   "id": 15,
+   "chapter": 4,
+   "start": 35.2,
+   "dur": 2.6,
+   "line": "You're terrified of the sky. It has no ceiling.",
+   "scale": "Medium Close-Up",
+   "avatar": true,
+   "avatar_stage": "adult",
+   "environment": "small cabin, faded photo of a sunny beach",
+   "camera": "push-in",
+   "action": "the marionette stares at a faded beach photo, joints trembling",
+   "keyframe": false,
+   "difficult": false,
+   "tags": [
+    "turn"
+   ]
+  },
+  {
+   "id": 16,
+   "chapter": 4,
+   "start": 37.8,
+   "dur": 2.4,
+   "line": "The last night, you sleep beside the porthole one more time.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "adult",
+   "environment": "nursery porthole from day one, jellyfish glowing",
+   "camera": "locked",
+   "action": "the adult curls by the same porthole, jellyfish drifting past",
+   "keyframe": false,
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 17,
+   "chapter": 5,
+   "start": 40.2,
+   "dur": 2.6,
+   "line": "Year thirty-one. The capsule rises for hours through darkness.",
+   "scale": "Medium",
+   "avatar": true,
+   "avatar_stage": "adult",
+   "environment": "capsule interior, black water outside",
+   "camera": "locked",
+   "action": "the marionette grips a seat strap as pressure gauges spin",
+   "keyframe": true,
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 18,
+   "chapter": 5,
+   "start": 42.8,
+   "dur": 2.4,
+   "line": "The water slowly turns from black to blue.",
+   "scale": "Wide",
+   "avatar": true,
+   "avatar_stage": "adult",
+   "environment": "capsule rising through gradient water, light rays above",
+   "camera": "locked",
+   "action": "the capsule ascends as the water lightens from black to blue",
+   "keyframe": false,
+   "difficult": true,
+   "tags": [
+    "interrupt"
+   ]
+  },
+  {
+   "id": 19,
+   "chapter": 5,
+   "start": 45.2,
+   "dur": 2.6,
+   "line": "The hatch opens. The light is so bright you close your eyes.",
+   "scale": "Medium Close-Up",
+   "avatar": true,
+   "avatar_stage": "adult",
+   "environment": "hatch opening, blinding sunlight",
+   "camera": "push-in",
+   "action": "sunlight floods the bead eyes; the marionette raises a hand to shield them",
+   "keyframe": true,
+   "difficult": false,
+   "tags": [
+    "interrupt"
+   ]
+  },
+  {
+   "id": 20,
+   "chapter": 5,
+   "start": 47.8,
+   "dur": 2.4,
+   "line": "And for the first time, the compass needle stops moving.",
+   "scale": "Close-Up",
+   "avatar": true,
+   "avatar_stage": "adult",
+   "environment": "the compass in the palm under open sky",
+   "camera": "locked",
+   "action": "the brass needle settles and stops, pointing straight up",
+   "keyframe": false,
+   "difficult": false,
+   "tags": []
+  },
+  {
+   "id": 21,
+   "chapter": 5,
+   "start": 50.2,
+   "dur": 4.4,
+   "line": "You finally reached the place it was pointing to all along. Home.",
+   "scale": "Wide",
+   "avatar": true,
+   "avatar_stage": "adult",
+   "environment": "capsule floating on calm sunlit ocean, open sky",
+   "camera": "push-in",
+   "action": "the marionette stands on the capsule holding the compass to the sky as gulls circle",
+   "keyframe": true,
+   "difficult": false,
+   "tags": [
+    "payoff"
+   ]
+  }
+ ]
+}

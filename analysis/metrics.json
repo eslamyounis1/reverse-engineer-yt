@@ -1,5 +1,73 @@
 [
   {
+    "ref": "R1",
+    "video_id": "TrU_nSJeu0Q",
+    "duration_s": 50,
+    "scene_count": 15,
+    "scene_dur_mean": 3.33,
+    "scene_dur_median": 3,
+    "scene_dur_min": 2,
+    "scene_dur_max": 5,
+    "pct_scenes_le_3s": 67,
+    "cuts_per_10s": 2.8,
+    "effective_cuts_per_10s": 2.8,
+    "mean_visual_hold_s": 3.33,
+    "hook_dur_s": 2,
+    "hook_words": 10,
+    "hook_text": "What would happen if you were raised by a billionaire? Day one.",
+    "spoken_words": 210,
+    "words_per_sec": 4.2,
+    "words_per_scene_mean": 14.0,
+    "words_per_scene_max": 25,
+    "silent_scenes": [],
+    "shot_scale_counts": {
+      "Medium": 8,
+      "Wide": 7
+    },
+    "pct_medium_family": 53,
+    "pct_close": 0,
+    "pct_wide": 47,
+    "scale_change_rate": 0.79,
+    "chapters": [
+      {
+        "scene": 1,
+        "t": 1.7,
+        "marker": "Day one"
+      },
+      {
+        "scene": 4,
+        "t": 8.0,
+        "marker": "Year ten"
+      },
+      {
+        "scene": 8,
+        "t": 21.0,
+        "marker": "Year 20"
+      },
+      {
+        "scene": 11,
+        "t": 30.0,
+        "marker": "Year 30"
+      },
+      {
+        "scene": 13,
+        "t": 37.0,
+        "marker": "Year 40"
+      }
+    ],
+    "chapter_count": 5,
+    "chapter_onset_pct": [
+      3,
+      16,
+      42,
+      60,
+      74
+    ],
+    "final_chapter_len_s": 13.0,
+    "first_chapter_t": 1.7,
+    "scenes_per_chapter": 3.0
+  },
+  {
     "ref": "R2",
     "video_id": "FEPc8jsf_Wc",
     "duration_s": 60,
@@ -10,6 +78,8 @@
     "scene_dur_max": 4,
     "pct_scenes_le_3s": 91,
     "cuts_per_10s": 3.5,
+    "effective_cuts_per_10s": 3.5,
+    "mean_visual_hold_s": 2.73,
     "hook_dur_s": 3,
     "hook_words": 14,
     "hook_text": "What would happen if you were stranded in the Alaskan wilderness for five days?",
@@ -31,33 +101,188 @@
     "chapters": [
       {
         "scene": 2,
-        "t": 3,
+        "t": 3.0,
         "marker": "Day one"
       },
       {
         "scene": 5,
-        "t": 10,
+        "t": 10.0,
         "marker": "Day two"
       },
       {
         "scene": 10,
-        "t": 23,
+        "t": 23.0,
         "marker": "Day three"
       },
       {
         "scene": 15,
-        "t": 38,
+        "t": 38.0,
         "marker": "Day four"
       },
       {
         "scene": 18,
-        "t": 48,
+        "t": 48.0,
         "marker": "Day five"
       }
     ],
     "chapter_count": 5,
-    "first_chapter_t": 3,
+    "chapter_onset_pct": [
+      5,
+      17,
+      38,
+      63,
+      80
+    ],
+    "final_chapter_len_s": 12.0,
+    "first_chapter_t": 3.0,
     "scenes_per_chapter": 4.4
+  },
+  {
+    "ref": "R3",
+    "video_id": "I9vWSCiumKo",
+    "duration_s": 45,
+    "scene_count": 16,
+    "scene_dur_mean": 2.81,
+    "scene_dur_median": 3.0,
+    "scene_dur_min": 2,
+    "scene_dur_max": 5,
+    "pct_scenes_le_3s": 88,
+    "cuts_per_10s": 3.33,
+    "effective_cuts_per_10s": 4.0,
+    "mean_visual_hold_s": 2.37,
+    "hook_dur_s": 2,
+    "hook_words": 13,
+    "hook_text": "What would happen if you were born as a slave in ancient Rome?",
+    "spoken_words": 204,
+    "words_per_sec": 4.53,
+    "words_per_scene_mean": 12.8,
+    "words_per_scene_max": 16,
+    "silent_scenes": [],
+    "shot_scale_counts": {
+      "Medium": 9,
+      "Wide": 4,
+      "Medium Close-Up": 2,
+      "Close-Up": 1
+    },
+    "pct_medium_family": 69,
+    "pct_close": 6,
+    "pct_wide": 25,
+    "scale_change_rate": 0.8,
+    "chapters": [
+      {
+        "scene": 2,
+        "t": 2.0,
+        "marker": "Day one"
+      },
+      {
+        "scene": 5,
+        "t": 9.0,
+        "marker": "Year five"
+      },
+      {
+        "scene": 8,
+        "t": 16.0,
+        "marker": "Year 15"
+      },
+      {
+        "scene": 11,
+        "t": 24.0,
+        "marker": "Year 25"
+      },
+      {
+        "scene": 14,
+        "t": 33.0,
+        "marker": "Year 30"
+      }
+    ],
+    "chapter_count": 5,
+    "chapter_onset_pct": [
+      4,
+      20,
+      36,
+      53,
+      73
+    ],
+    "final_chapter_len_s": 12.0,
+    "first_chapter_t": 2.0,
+    "scenes_per_chapter": 3.2
+  },
+  {
+    "ref": "R4",
+    "video_id": "L8pd3-SkbW8",
+    "duration_s": 58,
+    "scene_count": 27,
+    "scene_dur_mean": 2.15,
+    "scene_dur_median": 2,
+    "scene_dur_min": 1,
+    "scene_dur_max": 4,
+    "pct_scenes_le_3s": 96,
+    "cuts_per_10s": 4.48,
+    "effective_cuts_per_10s": 4.48,
+    "mean_visual_hold_s": 2.15,
+    "hook_dur_s": 1,
+    "hook_words": 11,
+    "hook_text": "What would happen if you were born in the year 3000?",
+    "spoken_words": 197,
+    "words_per_sec": 3.4,
+    "words_per_scene_mean": 9.0,
+    "words_per_scene_max": 13,
+    "silent_scenes": [
+      2,
+      11,
+      13,
+      18,
+      23
+    ],
+    "shot_scale_counts": {
+      "Medium": 17,
+      "Close-Up": 2,
+      "Medium Close-Up": 2,
+      "Wide": 5,
+      "Extreme Close-Up": 1
+    },
+    "pct_medium_family": 70,
+    "pct_close": 11,
+    "pct_wide": 19,
+    "scale_change_rate": 0.73,
+    "chapters": [
+      {
+        "scene": 3,
+        "t": 2.0,
+        "marker": "Day one"
+      },
+      {
+        "scene": 7,
+        "t": 8.0,
+        "marker": "Year 5"
+      },
+      {
+        "scene": 12,
+        "t": 18.0,
+        "marker": "Year 18"
+      },
+      {
+        "scene": 17,
+        "t": 29.0,
+        "marker": "Year 35"
+      },
+      {
+        "scene": 22,
+        "t": 41.0,
+        "marker": "Year 80"
+      }
+    ],
+    "chapter_count": 5,
+    "chapter_onset_pct": [
+      3,
+      14,
+      31,
+      50,
+      71
+    ],
+    "final_chapter_len_s": 17.0,
+    "first_chapter_t": 2.0,
+    "scenes_per_chapter": 5.4
   },
   {
     "ref": "R5",
@@ -70,6 +295,8 @@
     "scene_dur_max": 4,
     "pct_scenes_le_3s": 93,
     "cuts_per_10s": 4.06,
+    "effective_cuts_per_10s": 4.06,
+    "mean_visual_hold_s": 2.37,
     "hook_dur_s": 3,
     "hook_words": 11,
     "hook_text": "What if you were raised by the world's most dangerous tribe?",
@@ -94,32 +321,40 @@
     "chapters": [
       {
         "scene": 2,
-        "t": 3,
+        "t": 3.0,
         "marker": "Day one"
       },
       {
         "scene": 7,
-        "t": 13,
+        "t": 13.0,
         "marker": "Year three"
       },
       {
         "scene": 12,
-        "t": 25,
+        "t": 25.0,
         "marker": "Year ten"
       },
       {
         "scene": 18,
-        "t": 38,
+        "t": 38.0,
         "marker": "Year fifteen"
       },
       {
         "scene": 23,
-        "t": 50,
+        "t": 50.0,
         "marker": "Year twenty"
       }
     ],
     "chapter_count": 5,
-    "first_chapter_t": 3,
+    "chapter_onset_pct": [
+      5,
+      20,
+      39,
+      59,
+      78
+    ],
+    "final_chapter_len_s": 14.0,
+    "first_chapter_t": 3.0,
     "scenes_per_chapter": 5.4
   }
 ]
