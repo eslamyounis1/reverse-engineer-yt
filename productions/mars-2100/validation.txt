@@ -16,8 +16,8 @@ ch3_onset_pct                            35   37±6
 ch4_onset_pct                            53   57±6
 ch5_onset_pct                            74   75±6
 final_chapter_s                        14.8   12–17
-words_per_sec                          3.97   3.6–4.2
-max_words_per_shot                       13   ≤16
+words_per_sec                          4.15   3.6–4.2
+max_words_per_shot                       14   ≤16
 pct_medium_family                        64   60–80
 pct_wide                                 23   10–30
 pct_close                                14   5–15

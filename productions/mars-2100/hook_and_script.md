@@ -21,17 +21,17 @@ Why A wins:
 - It does not spoil the payoff.
 - "year 2100" sits inside the question, so the validator treats it as premise, not a chapter stamp.
 
-## Final narration script (5 chapters, ~228 words)
+## Final narration script (5 chapters, ~236 words)
 
 Pre-narration timings come from `plan.json`. Phase 5 retimes them to Whisper word timestamps.
 
 | Chapter | Stamp | Onset | Narration |
 |---|---|---|---|
 | Hook | — | 0.0 s | What would happen if you were born on Mars in the year 2100? |
-| 1 | **Day one** | 2.4 s (4%) | Day one. You're born under three metres of dirt that blocks radiation. Your first cry reaches Earth twelve minutes later. Earth sends back a gift: an apple seed in a tin cup. |
-| 2 | **Year six** | 9.8 s (17%) | Year six. You weigh just over a third of an Earth kid. Every jump in the school tunnel becomes a slow, floating flight. Outside, without a suit, the thin air would boil your blood. The noon sky is butterscotch. The sunsets glow blue. |
+| 1 | **Day one** | 2.4 s (4%) | Day one. You're born under three metres of dirt that blocks radiation. Your first cry, sent by radio, takes twelve minutes to reach Earth. Your parents carried one gift from Earth: an apple seed in a tin cup. |
+| 2 | **Year six** | 9.8 s (17%) | Year six. You weigh just over a third of an Earth kid. Every jump in the school tunnel becomes a slow, floating flight. Outside, without a suit, you'd pass out in seconds as your saliva boils. The noon sky is butterscotch. The sunsets glow blue. |
 | 3 | **Year fourteen** | 20.2 s (35%) | Year fourteen. A dust storm swallows the whole planet for months. The solar panels go dark. The colony rations every watt. You dig the greenhouse out by hand, sol after sol. Your seed is now a sapling, the only green for kilometres. |
-| 4 | **Year twenty-two** (turn) | 30.2 s (53%) | Year twenty-two. You finally win a seat on the ship to Earth. Launch windows open every twenty-six months. You've waited years. Then the medical scan flashes red. You grew up in Mars gravity. On Earth, you'd weigh almost triple. The ship leaves without you. |
+| 4 | **Year twenty-two** (turn) | 30.2 s (53%) | Year twenty-two. You finally win a seat on the ship to Earth. Launch windows open every twenty-six months. You've waited years. Then the medical scan flashes red. You grew up in Mars gravity. On Earth, you'd feel nearly three times heavier. The ship leaves without you. |
 | 5 | **Year thirty** (payoff) | 42.6 s (74%) | Year thirty. You run the largest garden on Mars. The seed from Earth is now a tree taller than you. Then a baby is born in the nursery where you were born. You plant a new seed in a tin cup. You were never an Earthling on Mars. You're the first Martian. |
 
 - **Structure:** lifespan premise; gaps 0 → 6 → 14 → 22 → 30 years.

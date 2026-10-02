@@ -154,8 +154,8 @@ Batch order:
 
 | Take | Words | Text |
 |---|---|---|
-| ch1 | 45 | What would happen if you were born on Mars in the year 2100? Day one. You're born under three metres of dirt that blocks radiation. Your first cry reaches Earth twelve minutes later. Earth sends back a gift: an apple seed in a tin cup. |
-| ch2 | 43 | Year six. You weigh just over a third of an Earth kid. Every jump in the school tunnel becomes a slow, floating flight. Outside, without a suit, the thin air would boil your blood. The noon sky is butterscotch. The sunsets glow blue. |
+| ch1 | 51 | What would happen if you were born on Mars in the year 2100? Day one. You're born under three metres of dirt that blocks radiation. Your first cry, sent by radio, takes twelve minutes to reach Earth. Your parents carried one gift from Earth: an apple seed in a tin cup. |
+| ch2 | 45 | Year six. You weigh just over a third of an Earth kid. Every jump in the school tunnel becomes a slow, floating flight. Outside, without a suit, you'd pass out in seconds as your saliva boils. The noon sky is butterscotch. The sunsets glow blue. |
 | ch3 | 42 | Year fourteen. A dust storm swallows the whole planet for months. The solar panels go dark. The colony rations every watt. You dig the greenhouse out by hand, sol after sol. Your seed is now a sapling, the only green for kilometres. |
-| ch4 | 44 | Year twenty-two. You finally win a seat on the ship to Earth. Launch windows open every twenty-six months. You've waited years. Then the medical scan flashes red. You grew up in Mars gravity. On Earth, you'd weigh almost triple. The ship leaves without you. |
+| ch4 | 46 | Year twenty-two. You finally win a seat on the ship to Earth. Launch windows open every twenty-six months. You've waited years. Then the medical scan flashes red. You grew up in Mars gravity. On Earth, you'd feel nearly three times heavier. The ship leaves without you. |
 | ch5 | 52 | Year thirty. You run the largest garden on Mars. The seed from Earth is now a tree taller than you. Then a baby is born in the nursery where you were born. You plant a new seed in a tin cup. You were never an Earthling on Mars. You're the first Martian. |

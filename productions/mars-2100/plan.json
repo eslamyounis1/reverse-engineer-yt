@@ -73,9 +73,9 @@
  "cost_preflight": {
   "image": 50.25,
   "video": 1128.0,
-  "narration": 8.3,
-  "total": 1186.55,
-  "contingency_20pct": 237.31,
+  "narration": 8.6,
+  "total": 1186.85,
+  "contingency_20pct": 237.37,
   "currency": "credits",
   "lines": [
    {
@@ -157,17 +157,17 @@
    },
    {
     "group": "narration",
-    "what": "narration take, chapter 1 (45 words)",
+    "what": "narration take, chapter 1 (51 words)",
     "count": 1,
-    "unit": 1.6,
-    "cost": 1.6
+    "unit": 1.8,
+    "cost": 1.8
    },
    {
     "group": "narration",
-    "what": "narration take, chapter 2 (43 words)",
+    "what": "narration take, chapter 2 (45 words)",
     "count": 1,
-    "unit": 1.6,
-    "cost": 1.6
+    "unit": 1.7,
+    "cost": 1.7
    },
    {
     "group": "narration",
@@ -178,7 +178,7 @@
    },
    {
     "group": "narration",
-    "what": "narration take, chapter 4 (44 words)",
+    "what": "narration take, chapter 4 (46 words)",
     "count": 1,
     "unit": 1.8,
     "cost": 1.8
@@ -308,7 +308,7 @@
     0.3,
     3.3
    ],
-   "line": "Your first cry reaches Earth twelve minutes later.",
+   "line": "Your first cry, sent by radio, takes twelve minutes to reach Earth.",
    "scale": "Medium Close-Up",
    "avatar": true,
    "avatar_stage": "newborn",
@@ -335,7 +335,7 @@
     0.3,
     3.5
    ],
-   "line": "Earth sends back a gift: an apple seed in a tin cup.",
+   "line": "Your parents carried one gift from Earth: an apple seed in a tin cup.",
    "scale": "Close-Up",
    "avatar": true,
    "avatar_stage": "newborn",
@@ -422,7 +422,7 @@
     0.3,
     3.5
    ],
-   "line": "Outside, without a suit, the thin air would boil your blood.",
+   "line": "Outside, without a suit, you'd pass out in seconds as your saliva boils.",
    "scale": "Medium Close-Up",
    "avatar": true,
    "avatar_stage": "child",
@@ -676,7 +676,7 @@
     0.3,
     3.5
    ],
-   "line": "You grew up in Mars gravity. On Earth, you'd weigh almost triple.",
+   "line": "You grew up in Mars gravity. On Earth, you'd feel nearly three times heavier.",
    "scale": "Medium",
    "avatar": true,
    "avatar_stage": "adult22",
