@@ -1,0 +1,282 @@
+[
+ {
+  "index": 0,
+  "key": "1b",
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "duration": 4,
+   "resolution": "1080p",
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "654e6b42-2918-4565-a0c3-bca80ae421e0"
+    }
+   ],
+   "prompt": "Extreme wide aerial shot. Slow drone glide forward. Setting: matches the first reference. a cluster of colony domes half-buried in red soil on a rocky Martian plain, a small rover trundling past leaving tracks, warm lights glowing in the dome windows. No characters visible. Stylized 3D animated feature-film look, single continuous shot, no cuts, no text, no letters, no captions.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 1,
+  "key": "2b",
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "duration": 4,
+   "resolution": "1080p",
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "c3b30ceb-9bb3-43f9-b94e-7d7d6c261d12"
+    },
+    {
+     "role": "image_references",
+     "value": "654e6b42-2918-4565-a0c3-bca80ae421e0"
+    }
+   ],
+   "prompt": "Wide cross-section shot. Slow vertical crane down. The cream knitted-wool character from the first reference (green button eyes, stitched brown smile, darker cream cheek patch, sunflower-yellow pom-pom beanie). Setting: matches the second reference. a cut-away view through thick layers of red dirt revealing a cosy, warmly lit nursery deep underground where the newborn version of the character sleeps swaddled in a crib. The character keeps its exact design. Stylized 3D animated feature-film look, single continuous shot, no cuts, no text, no letters, no captions.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 2,
+  "key": "7b",
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "duration": 4,
+   "resolution": "1080p",
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "371b1f75-6ef6-4bfb-8999-ecc47d2b3d66"
+    },
+    {
+     "role": "image_references",
+     "value": "8c63dede-95b3-4ddb-ad06-2b5830b7d945"
+    }
+   ],
+   "prompt": "Medium shot. Locked-off camera. The cream knitted-wool character from the first reference (green button eyes, stitched brown smile, darker cream cheek patch, sunflower-yellow pom-pom beanie). Setting: matches the second reference. the six-year-old character casually lifts a big metal crate over its head with one hand, grinning, while a classmate beside it stares with jaw dropped. The character keeps its exact design. Stylized 3D animated feature-film look, single continuous shot, no cuts, no text, no letters, no captions.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 3,
+  "key": "8b",
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "duration": 4,
+   "resolution": "1080p",
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "371b1f75-6ef6-4bfb-8999-ecc47d2b3d66"
+    },
+    {
+     "role": "image_references",
+     "value": "8c63dede-95b3-4ddb-ad06-2b5830b7d945"
+    }
+   ],
+   "prompt": "Medium shot. Gentle tilt up then down. The cream knitted-wool character from the first reference (green button eyes, stitched brown smile, darker cream cheek patch, sunflower-yellow pom-pom beanie). Setting: matches the second reference. the child bounces too high, softly bonks its beanie against the padded tunnel ceiling, then drifts slowly down giggling while a teacher in the background shakes her head. The character keeps its exact design. Stylized 3D animated feature-film look, single continuous shot, no cuts, no text, no letters, no captions.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 4,
+  "key": "13b",
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "duration": 4,
+   "resolution": "1080p",
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "f6676040-850e-4a5a-9d77-cbc48e45f077"
+    }
+   ],
+   "prompt": "Extreme wide high-angle shot. Locked-off camera. Setting: matches the first reference. a towering rust-red dust wall rolls across the plain and swallows the colony domes one by one, light fading to dim orange. No characters visible. Stylized 3D animated feature-film look, single continuous shot, no cuts, no text, no letters, no captions.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 5,
+  "key": "14b",
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "duration": 4,
+   "resolution": "1080p",
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "712b3760-4a00-47ba-8d6a-1f63e1f73063"
+    },
+    {
+     "role": "image_references",
+     "value": "f6676040-850e-4a5a-9d77-cbc48e45f077"
+    }
+   ],
+   "prompt": "Medium shot. Locked-off camera. The cream knitted-wool character from the first reference (green button eyes, stitched brown smile, darker cream cheek patch, sunflower-yellow pom-pom beanie). Setting: matches the second reference. in a dim red-lit room the teen character pedals hard on an exercise bike wired to a single small light bulb that flickers brighter, so a younger kid beside it can read a book. The character keeps its exact design. Stylized 3D animated feature-film look, single continuous shot, no cuts, no text, no letters, no captions.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 6,
+  "key": "15b",
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "duration": 4,
+   "resolution": "1080p",
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "712b3760-4a00-47ba-8d6a-1f63e1f73063"
+    },
+    {
+     "role": "image_references",
+     "value": "f6676040-850e-4a5a-9d77-cbc48e45f077"
+    }
+   ],
+   "prompt": "Medium shot. Gentle handheld camera. The cream knitted-wool character from the first reference (green button eyes, stitched brown smile, darker cream cheek patch, sunflower-yellow pom-pom beanie). Setting: matches the second reference. the exhausted dusty teen in a pressure suit flops face-first into a soft drift of red dust, lies still for a beat, then pops back up and keeps shovelling. The character keeps its exact design. Stylized 3D animated feature-film look, single continuous shot, no cuts, no text, no letters, no captions.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 7,
+  "key": "16b",
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "duration": 4,
+   "resolution": "1080p",
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "712b3760-4a00-47ba-8d6a-1f63e1f73063"
+    },
+    {
+     "role": "image_references",
+     "value": "f6676040-850e-4a5a-9d77-cbc48e45f077"
+    }
+   ],
+   "prompt": "Close-Up shot. Slow push-in. The cream knitted-wool character from the first reference (green button eyes, stitched brown smile, darker cream cheek patch, sunflower-yellow pom-pom beanie). Setting: matches the second reference. inside the greenhouse the teen character carefully squeezes a single water drop from an eyedropper onto a tiny green apple sapling in a tin cup, tongue poking out in concentration. The character keeps its exact design. Stylized 3D animated feature-film look, single continuous shot, no cuts, no text, no letters, no captions.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 8,
+  "key": "17b",
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "duration": 4,
+   "resolution": "1080p",
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "765a97cd-00ac-4261-b8a1-63f5e3f62adb"
+    },
+    {
+     "role": "image_references",
+     "value": "e4e034f7-e958-4c4b-bfc9-c6299cfc2145"
+    }
+   ],
+   "prompt": "Medium shot. Locked-off camera. The cream knitted-wool character from the first reference (green button eyes, stitched brown smile, darker cream cheek patch, sunflower-yellow pom-pom beanie). Setting: matches the second reference. the young adult character does a goofy happy victory dance in its small quarters, waving a glowing boarding token above its head. The character keeps its exact design. Stylized 3D animated feature-film look, single continuous shot, no cuts, no text, no letters, no captions.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 9,
+  "key": "18b",
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "duration": 4,
+   "resolution": "1080p",
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "765a97cd-00ac-4261-b8a1-63f5e3f62adb"
+    },
+    {
+     "role": "image_references",
+     "value": "e4e034f7-e958-4c4b-bfc9-c6299cfc2145"
+    }
+   ],
+   "prompt": "Medium shot. Slow push-in. The cream knitted-wool character from the first reference (green button eyes, stitched brown smile, darker cream cheek patch, sunflower-yellow pom-pom beanie). Setting: matches the second reference. the character stands before a wall completely covered in crossed-off paper calendars and draws one final big X with a marker, then steps back proudly. The character keeps its exact design. Stylized 3D animated feature-film look, single continuous shot, no cuts, no text, no letters, no captions.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 10,
+  "key": "20b",
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "duration": 4,
+   "resolution": "1080p",
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "765a97cd-00ac-4261-b8a1-63f5e3f62adb"
+    },
+    {
+     "role": "image_references",
+     "value": "e4e034f7-e958-4c4b-bfc9-c6299cfc2145"
+    }
+   ],
+   "prompt": "Medium Close-Up shot. Locked-off camera. The cream knitted-wool character from the first reference (green button eyes, stitched brown smile, darker cream cheek patch, sunflower-yellow pom-pom beanie). Setting: matches the second reference. the character watches a holographic display in a medical bay: a small glowing hologram of itself standing on a blue planet slowly squashes flat like a pancake, and the real character winces. The character keeps its exact design. Stylized 3D animated feature-film look, single continuous shot, no cuts, no text, no letters, no captions.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 11,
+  "key": "20c",
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "duration": 4,
+   "resolution": "1080p",
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "765a97cd-00ac-4261-b8a1-63f5e3f62adb"
+    },
+    {
+     "role": "image_references",
+     "value": "e4e034f7-e958-4c4b-bfc9-c6299cfc2145"
+    }
+   ],
+   "prompt": "Medium shot. Locked-off camera. The cream knitted-wool character from the first reference (green button eyes, stitched brown smile, darker cream cheek patch, sunflower-yellow pom-pom beanie). Setting: matches the second reference. in a gravity-training room the character grabs a small dumbbell with both hands and strains with all its might, but the dumbbell will not budge from the floor. The character keeps its exact design. Stylized 3D animated feature-film look, single continuous shot, no cuts, no text, no letters, no captions.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ }
+]

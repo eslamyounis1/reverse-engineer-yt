@@ -2,9 +2,10 @@
 import base64, gzip, sys
 def b(path): return base64.b64encode(gzip.compress(open(path, "rb").read(), 9)).decode()
 up = open(sys.argv[1]).read().strip()
+tl = sys.argv[2] if len(sys.argv) > 2 else 'timeline.json'
 cmd = f"""set -e; mkdir -p /home/user/wi && cd /home/user/wi
 printf '%s' '{b('../../faceless-what-if-shorts/scripts/assemble_short.py')}' | base64 -d | gunzip > assemble_short.py
-printf '%s' '{b('timeline.json')}' | base64 -d | gunzip > timeline.json
+printf '%s' '{b(tl)}' | base64 -d | gunzip > timeline.json
 printf '%s' '{b('script_manifest.json')}' | base64 -d | gunzip > script_manifest.json
 python3 assemble_short.py timeline.json --out final_clean.mp4
 bash ${{HF_WORKFLOWS}}/subtitles/scripts/fetch_fonts.sh >/dev/null 2>&1 || true
