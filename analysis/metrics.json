@@ -1,0 +1,125 @@
+[
+  {
+    "ref": "R2",
+    "video_id": "FEPc8jsf_Wc",
+    "duration_s": 60,
+    "scene_count": 22,
+    "scene_dur_mean": 2.73,
+    "scene_dur_median": 3.0,
+    "scene_dur_min": 2,
+    "scene_dur_max": 4,
+    "pct_scenes_le_3s": 91,
+    "cuts_per_10s": 3.5,
+    "hook_dur_s": 3,
+    "hook_words": 14,
+    "hook_text": "What would happen if you were stranded in the Alaskan wilderness for five days?",
+    "spoken_words": 233,
+    "words_per_sec": 3.88,
+    "words_per_scene_mean": 10.6,
+    "words_per_scene_max": 15,
+    "silent_scenes": [],
+    "shot_scale_counts": {
+      "Wide": 1,
+      "Medium": 13,
+      "Close-Up": 4,
+      "Medium Close-Up": 4
+    },
+    "pct_medium_family": 77,
+    "pct_close": 18,
+    "pct_wide": 5,
+    "scale_change_rate": 0.71,
+    "chapters": [
+      {
+        "scene": 2,
+        "t": 3,
+        "marker": "Day one"
+      },
+      {
+        "scene": 5,
+        "t": 10,
+        "marker": "Day two"
+      },
+      {
+        "scene": 10,
+        "t": 23,
+        "marker": "Day three"
+      },
+      {
+        "scene": 15,
+        "t": 38,
+        "marker": "Day four"
+      },
+      {
+        "scene": 18,
+        "t": 48,
+        "marker": "Day five"
+      }
+    ],
+    "chapter_count": 5,
+    "first_chapter_t": 3,
+    "scenes_per_chapter": 4.4
+  },
+  {
+    "ref": "R5",
+    "video_id": "786iLphSIMI",
+    "duration_s": 64,
+    "scene_count": 27,
+    "scene_dur_mean": 2.37,
+    "scene_dur_median": 2,
+    "scene_dur_min": 1,
+    "scene_dur_max": 4,
+    "pct_scenes_le_3s": 93,
+    "cuts_per_10s": 4.06,
+    "hook_dur_s": 3,
+    "hook_words": 11,
+    "hook_text": "What if you were raised by the world's most dangerous tribe?",
+    "spoken_words": 215,
+    "words_per_sec": 3.36,
+    "words_per_scene_mean": 8.6,
+    "words_per_scene_max": 16,
+    "silent_scenes": [
+      17,
+      27
+    ],
+    "shot_scale_counts": {
+      "Medium": 19,
+      "Close-Up": 2,
+      "Wide": 3,
+      "Medium Close-Up": 3
+    },
+    "pct_medium_family": 81,
+    "pct_close": 7,
+    "pct_wide": 11,
+    "scale_change_rate": 0.54,
+    "chapters": [
+      {
+        "scene": 2,
+        "t": 3,
+        "marker": "Day one"
+      },
+      {
+        "scene": 7,
+        "t": 13,
+        "marker": "Year three"
+      },
+      {
+        "scene": 12,
+        "t": 25,
+        "marker": "Year ten"
+      },
+      {
+        "scene": 18,
+        "t": 38,
+        "marker": "Year fifteen"
+      },
+      {
+        "scene": 23,
+        "t": 50,
+        "marker": "Year twenty"
+      }
+    ],
+    "chapter_count": 5,
+    "first_chapter_t": 3,
+    "scenes_per_chapter": 5.4
+  }
+]

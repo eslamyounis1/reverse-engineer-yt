@@ -1,0 +1,32 @@
+{
+  "ref": "R2",
+  "video_id": "FEPc8jsf_Wc",
+  "url": "https://www.youtube.com/watch?v=FEPc8jsf_Wc",
+  "higgsfield_analysis_id": "83882c97-2e7c-43a0-9dac-a8c07730af71",
+  "timestamp_convention": "exclusive",
+  "note": "Higgsfield 'label' field uses an ad-template taxonomy (e.g. 'Product Selling Points') and is ignored. Timestamps are 1s granularity; scene end == next scene start.",
+  "scenes": [
+    {"n":1,"start":0,"end":3,"shot":"Wide","audio":"What would happen if you were stranded in the Alaskan wilderness for five days?","visual":"Skeleton protagonist with visible eyeballs, red plaid flannel, cargo pants, backpack, stands on float of red/white seaplane on calm lake; pine forest, snowy mountains; concerned expression; soft morning light; two ducks take off."},
+    {"n":2,"start":3,"end":5,"shot":"Medium","audio":"Day one. The float plane touches down on a remote lake and drops you off.","visual":"Same skeleton on rocky lakeshore waving as seaplane takes off behind; holds blue sleeping mat; mountains reflected in water."},
+    {"n":3,"start":5,"end":8,"shot":"Medium","audio":"You watch the plane disappear over the mountains.","visual":"Back view of skeleton on high ridge over valley at sunset, orange/pink sky, hand at forehead watching plane leave; warm dramatic light."},
+    {"n":4,"start":8,"end":10,"shot":"Medium","audio":"Now you're completely alone with just a knife and clothes on your back.","visual":"Skeleton walks through dense pine forest, sunbeams through canopy; backpack, water bottle; knife sheathed on hip."},
+    {"n":5,"start":10,"end":12,"shot":"Close-Up","audio":"Day two. You wake up freezing...","visual":"Close-up of bony hands drawing fixed-blade knife from sheath; mossy forest floor background."},
+    {"n":6,"start":12,"end":14,"shot":"Medium","audio":"...and spend the entire day building a proper bushcraft shelter with logs and moss insulation.","visual":"Skeleton carries log on shoulder, building lean-to of vertical poles; determined wide eyes."},
+    {"n":7,"start":14,"end":17,"shot":"Medium Close-Up","audio":"Your body is already weaker from eating nothing but berries...","visual":"Skeleton crouches by lake looking at small pile of berries on rock; exhausted, slumped; lake and snowy mountains behind."},
+    {"n":8,"start":17,"end":20,"shot":"Medium","audio":"...and one small fish. A grizzly bear walks past your camp at dawn.","visual":"Grizzly bear walks across foreground near shore; skeleton in background outside moss shelter, frozen in fear."},
+    {"n":9,"start":20,"end":23,"shot":"Close-Up","audio":"You hold your breath and don't move.","visual":"Extreme close-up of skeleton face peering between shelter logs, hands gripping logs, eyes wide with terror; dim shadowy light."},
+    {"n":10,"start":23,"end":27,"shot":"Medium Close-Up","audio":"Day three. You spend six hours trying to start a fire with sticks...","visual":"On-screen 'Day 3'. Skeleton kneels using bow drill rapidly; smoke rises."},
+    {"n":11,"start":27,"end":29,"shot":"Close-Up","audio":"...and finally get a spark.","visual":"Close-up of skull face blowing on tinder bundle catching fire; orange glow on skull."},
+    {"n":12,"start":29,"end":32,"shot":"Medium","audio":"The warmth feels like heaven, but your stomach is eating itself.","visual":"Skeleton sits by campfire at twilight, purple/blue sky, hands to flames, relieved; shelter and lake behind."},
+    {"n":13,"start":32,"end":35,"shot":"Medium","audio":"You set fishing lines in the lake and catch two trout.","visual":"Skeleton in shallow lake water pulling up line with two trout; excited."},
+    {"n":14,"start":35,"end":38,"shot":"Medium Close-Up","audio":"It's the best meal of your life.","visual":"Night. Skeleton kneels by fire preparing fish on flat stone with knife; firelight flickers on ribs and skull."},
+    {"n":15,"start":38,"end":41,"shot":"Medium","audio":"Day four. You hear wolves howling at night and don't sleep at all.","visual":"On-screen 'Day 4'. Skeleton huddled in shelter at night; glowing yellow wolf eyes in dark forest; aurora borealis in sky."},
+    {"n":16,"start":41,"end":44,"shot":"Close-Up","audio":"Your hands are covered in cuts from building fish traps and gathering firewood.","visual":"Close-up of hands weaving branch basket; hands stained dark red with cracks; near water."},
+    {"n":17,"start":44,"end":48,"shot":"Medium","audio":"Your mind starts playing tricks on you. You see things that aren't there.","visual":"Semi-transparent ghostly female figure, long black hair, white dress, appears behind skeleton in night forest; skeleton startled, turns, reaches toward hallucination."},
+    {"n":18,"start":48,"end":51,"shot":"Medium","audio":"Day five. You hear the floatplane engine in the distance...","visual":"On-screen 'Day 5'. Skeleton in front of shelter cupping hand to ear; clothes now tattered and torn."},
+    {"n":19,"start":51,"end":53,"shot":"Medium","audio":"...and run to the lakeshore.","visual":"Skeleton runs frantically through sunny forest toward lake."},
+    {"n":20,"start":53,"end":55,"shot":"Medium Close-Up","audio":"The pilot helps you inside and you fly home.","visual":"Seaplane docked at shore; human pilot (bearded, cap) reaches out of cabin to help skeleton onto float."},
+    {"n":21,"start":55,"end":57,"shot":"Medium","audio":"Your wife and three kids are waiting on the dock.","visual":"Wooden dock by large log cabin; four skeletons (woman + three children) wave as seaplane approaches; mountains, sunset."},
+    {"n":22,"start":57,"end":60,"shot":"Medium","audio":"You think about starting a YouTube channel to share what you learned.","visual":"Inside warm log cabin, skeleton types on laptop at wooden desk; family on sofa reading behind; thoughtful, content."}
+  ]
+}
