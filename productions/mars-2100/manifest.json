@@ -86,7 +86,7 @@
   "23": "a9bfdcb3-eb98-4b52-85d8-a34873dd2f68",
   "24": "ac09c8a3-17ac-4273-9fd7-b6086e09a55a",
   "25": "ba35eb3a-273e-4522-a6ea-826e5e3be657",
-  "26": "6b9eae45-6d69-4705-a02e-d9bae94c769f"
+  "26": "752c88ac-579e-428b-a85c-759594d44de7"
  },
  "credits_spent": {
   "images": 50.25,
@@ -109,6 +109,8 @@
   "21": "0cc1340c-3864-40e1-9c40-dae98c5a56c7"
  },
  "rejected": {
-  "26_nsfw_false_positive": "e43a5370-a769-4b1f-aabe-5d9a2438cffb"
+  "26_nsfw_false_positive": "e43a5370-a769-4b1f-aabe-5d9a2438cffb",
+  "26_nsfw_retry1": "6b9eae45-6d69-4705-a02e-d9bae94c769f",
+  "26_nsfw_retry2": "2f5e2c51-0fe9-48e2-91d1-7653162b00c2"
  }
 }

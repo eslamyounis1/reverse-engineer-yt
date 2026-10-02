@@ -238,7 +238,8 @@
   "dur = final edited hold; gen_duration = Seedance source clip (>=4s), trimmed to useful_window.",
   "Hook contains 'year 2100' inside the question; the validator treats it as premise, not a chapter stamp.",
   "Retimed to Whisper word timestamps of narration v2 (speech_rate 75; v1 at 25 measured 2.8 w/s, rejected).",
-  "Retimed to Whisper word timestamps of narration v2 (speech_rate 75; v1 at 25 measured 2.8 w/s, rejected)."
+  "Retimed to Whisper word timestamps of narration v2 (speech_rate 75; v1 at 25 measured 2.8 w/s, rejected).",
+  "Payoff shot re-staged after 3 content-filter false positives on the 'cup raised to the sky' composition; now starts from the ch5 establishing frame (REUSE_REFERENCE). The xhigh payoff keyframe 2f79ee68 is kept but unused."
  ],
  "chapters": [
   {
@@ -1036,8 +1037,7 @@
    "scale": "Wide",
    "avatar": true,
    "avatar_stage": "adult30",
-   "visual_source": "KEYFRAME_REQUIRED",
-   "keyframe_reason": "payoff frame: prop callback in final tableau (xhigh)",
+   "visual_source": "REUSE_REFERENCE",
    "refs": [
     "avatar:stage:adult30",
     "env:ch5"
@@ -1046,11 +1046,13 @@
    "key": "22",
    "environment": "greenhouse dome at blue sunset, apple tree behind, red plains and the blue-haloed sun beyond",
    "camera": "push-in",
-   "action": "the avatar looks up at a tiny blue dot (Earth) in the dusk sky, then lifts the tin cup with the new seed toward it, the apple tree glowing behind",
+   "action": "Pip places the small tin cup at the roots of the young apple tree, then looks up through the dome at a tiny blue dot (Earth) as the light turns blue",
    "difficult": false,
    "tags": [
     "payoff"
-   ]
+   ],
+   "reuse_of": "keyframe:shot22",
+   "reuse_mode": "start_image"
   }
  ],
  "narration": {
