@@ -8,7 +8,8 @@ timeline.json:
   "shots": [{"url": "https://...mp4", "in": 0.3, "dur": 2.4, "label": "DAY 1",
              "gen_duration": 4, "diegetic": false, "diegetic_db": -20}, ...]
 }
-`dur` is the FINAL EDITED hold (1–5 s). The Seedance source clip is longer (>= 4 s);
+"still": true marks a shot rendered from an approved keyframe image with a slow push-in
+(fallback when a video shot cannot be generated). `dur` is the FINAL EDITED hold (1–5 s). The Seedance source clip is longer (>= 4 s);
 `in` = plan.useful_window[0], and the shot is trimmed to [in, in+dur]. A window that runs past
 the source clip is a hard failure (no silent freeze-frame padding).
 Seedance audio is DROPPED unless the shot is marked "diegetic": true; diegetic audio is
@@ -102,10 +103,23 @@ def main(argv):
 
     seg_list, aud_list, planned, diegetic_n = [], [], 0.0, 0
     for i, s in enumerate(tl["shots"], 1):
-        src = f"clips/shot{i:02d}.mp4"
+        src = f"clips/shot{i:02d}" + (".png" if s.get("still") else ".mp4")
         fetch(s["url"], src)
         frames = max(1, round(s["dur"] * fps))
         planned += frames / fps
+        if s.get("still"):
+            # Fallback for a shot Seedance could not render: slow push-in on its approved keyframe.
+            seg = f"segs/seg{i:02d}.mp4"
+            zp = (f"scale={W*2}:{H*2}:force_original_aspect_ratio=increase,crop={W*2}:{H*2},"
+                  f"zoompan=z='min(1+0.0009*on,1.15)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={frames}:s={W}x{H}:fps={fps},setsar=1")
+            run(["ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", src, "-vf", zp, "-frames:v", str(frames),
+                 "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(fps), seg])
+            seg_list.append(seg)
+            wav = f"segs/aud{i:02d}.wav"
+            run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=mono", "-t", f"{frames/fps:.3f}", wav])
+            aud_list.append(wav)
+            print(f"shot {i:02d}: STILL push-in {frames/fps:.2f}s", file=sys.stderr)
+            continue
         cdur = probe(src, "v:0")
         start = float(s.get("in", 0.3))
         if start + s["dur"] > cdur + 0.05:
@@ -144,8 +158,12 @@ def main(argv):
 
     with open("segs/list.txt", "w") as f:
         f.writelines(f"file '{os.path.basename(p)}'\n" for p in seg_list)
-    run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", "segs/list.txt", "-c", "copy",
-         "video_only.mp4"])
+    # concat FILTER (frame-exact); the concat demuxer with -c copy drifts ~0.03 s per segment
+    ins = [x for sg in seg_list for x in ("-i", sg)]
+    run(["ffmpeg", "-y", "-v", "error", *ins, "-filter_complex",
+         "".join(f"[{k}:v]" for k in range(len(seg_list))) + f"concat=n={len(seg_list)}:v=1:a=0[v]",
+         "-map", "[v]", "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p",
+         "-r", str(fps), "video_only.mp4"])
     vdur = probe("video_only.mp4", "v:0")
     if narr > vdur + 0.05:
         raise SystemExit(f"narration {narr:.2f}s longer than picture {vdur:.2f}s: extend final shot dur")

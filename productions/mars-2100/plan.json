@@ -239,7 +239,8 @@
   "Hook contains 'year 2100' inside the question; the validator treats it as premise, not a chapter stamp.",
   "Retimed to Whisper word timestamps of narration v2 (speech_rate 75; v1 at 25 measured 2.8 w/s, rejected).",
   "Retimed to Whisper word timestamps of narration v2 (speech_rate 75; v1 at 25 measured 2.8 w/s, rejected).",
-  "Payoff shot re-staged after 3 content-filter false positives on the 'cup raised to the sky' composition; now starts from the ch5 establishing frame (REUSE_REFERENCE). The xhigh payoff keyframe 2f79ee68 is kept but unused."
+  "Payoff shot re-staged after 3 content-filter false positives on the 'cup raised to the sky' composition; now starts from the ch5 establishing frame (REUSE_REFERENCE). The xhigh payoff keyframe 2f79ee68 is kept but unused.",
+  "Shot 26: 5 consecutive Seedance renders of the dusk greenhouse payoff returned content-filter (nsfw) flags; first cut uses a push-in on the approved GPT Image 2.5 payoff keyframe instead."
  ],
  "chapters": [
   {
@@ -1037,7 +1038,7 @@
    "scale": "Wide",
    "avatar": true,
    "avatar_stage": "adult30",
-   "visual_source": "REUSE_REFERENCE",
+   "visual_source": "KEYFRAME_REQUIRED",
    "refs": [
     "avatar:stage:adult30",
     "env:ch5"
@@ -1046,13 +1047,13 @@
    "key": "22",
    "environment": "greenhouse dome at blue sunset, apple tree behind, red plains and the blue-haloed sun beyond",
    "camera": "push-in",
-   "action": "Pip places the small tin cup at the roots of the young apple tree, then looks up through the dome at a tiny blue dot (Earth) as the light turns blue",
+   "action": "slow push-in on the approved payoff keyframe: Pip lifts the tin cup with the new seed toward the tiny blue dot (Earth), apple tree glowing behind",
    "difficult": false,
    "tags": [
     "payoff"
    ],
-   "reuse_of": "keyframe:shot22",
-   "reuse_mode": "start_image"
+   "keyframe_reason": "payoff frame (xhigh); rendered as a still push-in after 5 Seedance content-filter false positives",
+   "render": "still_pushin"
   }
  ],
  "narration": {

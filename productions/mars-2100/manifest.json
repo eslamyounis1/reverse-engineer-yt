@@ -86,7 +86,7 @@
   "23": "a9bfdcb3-eb98-4b52-85d8-a34873dd2f68",
   "24": "ac09c8a3-17ac-4273-9fd7-b6086e09a55a",
   "25": "ba35eb3a-273e-4522-a6ea-826e5e3be657",
-  "26": "752c88ac-579e-428b-a85c-759594d44de7"
+  "26": "STILL:2f79ee68-bd3f-4fbf-b9d9-1e1753aa06ce"
  },
  "credits_spent": {
   "images": 50.25,
@@ -111,6 +111,30 @@
  "rejected": {
   "26_nsfw_false_positive": "e43a5370-a769-4b1f-aabe-5d9a2438cffb",
   "26_nsfw_retry1": "6b9eae45-6d69-4705-a02e-d9bae94c769f",
-  "26_nsfw_retry2": "2f5e2c51-0fe9-48e2-91d1-7653162b00c2"
+  "26_nsfw_retry2": "2f5e2c51-0fe9-48e2-91d1-7653162b00c2",
+  "26_nsfw_retry3": "752c88ac-579e-428b-a85c-759594d44de7",
+  "26_nsfw_retry4": "30417e06-5f68-4a08-8d9a-42072b72f5d0"
+ },
+ "first_cut": {
+  "media_id": "aa922a56-7460-4825-a730-009a7d35c255",
+  "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/aa922a56-7460-4825-a730-009a7d35c255.mp4",
+  "duration_s": 59.93,
+  "resolution": "1080x1920@30",
+  "shots": 26,
+  "captions": {
+   "look": "bold tiktok",
+   "similarity": 0.939,
+   "words": "236/236"
+  },
+  "diegetic_bed_peak_db": -29.5,
+  "narration_peak_db": -2.1,
+  "qc_analysis_id": "dae6c78b-f823-427e-9295-61827ec5dd51"
+ },
+ "credits": {
+  "balance_start": 3584.16,
+  "balance_after_first_cut": 2256.71,
+  "spent": 1327.45,
+  "approved_estimate": 1186.85,
+  "approved_allowance": 237.37
  }
 }

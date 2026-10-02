@@ -20,7 +20,7 @@ def main(path):
             label = LABELS[s["chapter"]]
         shots.append({"url": urls[str(s["id"])], "in": s["useful_window"][0], "dur": s["dur"],
                       "gen_duration": s["gen_duration"], "diegetic": s["audio"] == "diegetic",
-                      "diegetic_db": -20, "label": label})
+                      "diegetic_db": -20, "label": label, "still": urls[str(s["id"])].endswith(".png")})
     tl = {"fps": 30, "width": 1080, "height": 1920, "narration_url": p["narration"]["url"], "shots": shots}
     json.dump(tl, open("timeline.json", "w"), indent=1)
     blocks, cur = [], {}
