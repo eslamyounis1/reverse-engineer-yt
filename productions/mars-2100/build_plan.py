@@ -18,24 +18,36 @@ SHOTS = [
   {"keyframe_reason": "chapter 1 opener: habitat design", "keyframe_is_establishing": True}, "locked",
   "cutaway of habitat dome buried under red regolith mounds, warm interior light, rocky crater outside",
   "a parent in a grey colony jumpsuit lifts the swaddled newborn as soil trickles on the dome roof", []),
- (3, 1, 2.4, "Your first cry, sent by radio, takes twelve minutes to reach Earth.", "Medium Close-Up", K,
-  {"keyframe_reason": "diegetic UI: signal-delay counter '12:00' on comms screen"}, "locked",
+ (3, 1, 2.4, "Your first cry, sent by radio,", "Medium Close-Up", K,
+  {"keyframe_reason": "diegetic UI: signal-delay counter '12:00' on comms screen", "jcut": 0.25}, "locked",
   "comms alcove, glowing screen with a transmission bar and delay counter reading 12:00",
   "the newborn wails in the foreground while a signal bar crawls across the screen behind", []),
- (4, 1, 2.6, "Your parents carried one gift from Earth: an apple seed in a tin cup.", "Close-Up", R,
+ ("3b", 1, 2.4, "takes twelve minutes to reach Earth.", "Medium Close-Up", R,
+  {"reuse_of": "keyframe:shot3", "reuse_mode": "image_references"}, "push-in", "the same comms screen, close",
+  "close on the glowing comms screen: the delay counter ticks from 12:00 as the signal bar crawls; the newborn's tiny wool hand rests at the frame edge", ["interrupt"]),
+ (4, 1, 2.0, "Your parents carried one gift from Earth:", "Medium Close-Up", R,
+  {"reuse_of": "prop:seedcup", "reuse_mode": "image_references", "jcut": 0.3}, "locked", "habitat nursery, warm lamp",
+  "a parent's hands lower a dented tin cup of dark soil beside the swaddled newborn, who turns its button eyes toward it", ["plant"]),
+ ("4b", 1, 1.6, "an apple seed in a tin cup.", "Close-Up", R,
   {"reuse_of": "prop:seedcup", "reuse_mode": "image_references"}, "push-in", "habitat nursery shelf, warm lamp",
-  "tiny wool hand reaches and touches a dented tin cup holding one apple seed in dark soil", ["plant"]),
+  "tiny wool hand reaches and touches the single apple seed resting on the soil in the tin cup", []),
  (5, 2, 2.6, "Year six. You weigh just over a third of an Earth kid.", "Medium", K,
   {"keyframe_reason": "chapter 2 opener: underground school tunnel", "keyframe_is_establishing": True}, "locked",
   "underground school tunnel, padded walls, painted planet murals, cool white strip lights",
   "six-year-old avatar steps onto a floor scale whose needle barely moves; classmates giggle behind", []),
  (6, 2, 2.4, "Every jump in the school tunnel becomes a slow, floating flight.", "Medium", D,
-  {}, "low tracking", "same school tunnel",
+  {"jcut": 0.1}, "low tracking", "same school tunnel",
   "the child leaps and floats in a long slow arc over a line of laughing classmates", ["interrupt"]),
- (7, 2, 2.6, "Outside, without a suit, you'd pass out in seconds as your saliva boils.", "Medium Close-Up", D,
+ (7, 2, 2.6, "Outside, without a suit,", "Medium Close-Up", D,
   {}, "push-in", "airlock chamber, red warning light, pressure gauge",
   "the child in a small orange pressure suit seals a bubble helmet as the airlock light turns from red to green", []),
- (8, 2, 2.8, "The noon sky is butterscotch. The sunsets glow blue.", "Wide", K,
+ ("7b", 2, 2.4, "you'd pass out in seconds as your saliva boils.", "Wide", D,
+  {}, "behind follow", "airlock door opening onto the red plain, distant dust devils, butterscotch haze",
+  "the suited child steps out of the airlock onto the red plain, helmet visor catching the hazy light", []),
+ ("8a", 2, 2.4, "The noon sky is butterscotch.", "Medium", D,
+  {}, "locked", "red plain at noon, hazy butterscotch sky, small pale sun overhead",
+  "the suited child tilts its helmet back to look up at the butterscotch noon sky", []),
+ (8, 2, 2.8, "The sunsets glow blue.", "Wide", K,
   {"keyframe_reason": "composition: tiny suited child silhouetted against a blue Martian sunset"}, "locked",
   "crater rim at dusk, cold blue glow around a small pale sun, butterscotch sky above, long shadows",
   "the suited child stands on the crater rim as the sun sinks and the blue halo spreads", ["interrupt"]),
@@ -44,10 +56,10 @@ SHOTS = [
   "habitat observation window, a towering brown dust wall rolling across the plain, light dimming to rust",
   "the teen avatar presses a hand to the window as the dust wall swallows the horizon", ["interrupt"]),
  (10, 3, 2.4, "The solar panels go dark. The colony rations every watt.", "Medium", D,
-  {}, "locked", "habitat corridor under red emergency lighting, dust-caked solar panels visible through a porthole",
+  {"jcut": 0.15}, "locked", "habitat corridor under red emergency lighting, dust-caked solar panels visible through a porthole",
   "the teen switches off lamps one by one as the corridor drops into red emergency light", []),
  (11, 3, 2.6, "You dig the greenhouse out by hand, sol after sol.", "Medium", D,
-  {}, "handheld", "outside the greenhouse dome in swirling brown dust, half-buried dome",
+  {"jcut": 0.3}, "handheld", "outside the greenhouse dome in swirling brown dust, half-buried dome",
   "the teen in a dusty pressure suit shovels drifts away from the greenhouse door", ["montage"]),
  (12, 3, 2.4, "Your seed is now a sapling, the only green for kilometres.", "Close-Up", R,
   {"reuse_of": "prop:seedcup", "reuse_mode": "image_references"}, "push-in", "greenhouse bench under dim red grow-light",
@@ -67,7 +79,7 @@ SHOTS = [
   {}, "locked", "clinic room with a gravity-simulator harness",
   "in a gravity simulator, the avatar's knees buckle and it grips the handrails, straining", ["turn"]),
  (17, 4, 2.4, "The ship leaves without you.", "Medium", R,
-  {"reuse_of": "keyframe:shot13", "reuse_mode": "start_image"}, "locked", "the same launch hall window, rocket lifting off on a pillar of flame",
+  {"reuse_of": "keyframe:shot13", "reuse_mode": "start_image", "jcut": 0.45}, "locked", "the same launch hall window, rocket lifting off on a pillar of flame",
   "the avatar presses a palm to the window as the rocket rises and the hall trembles", []),
  (18, 5, 2.6, "Year thirty. You run the largest garden on Mars.", "Wide", K,
   {"keyframe_reason": "chapter 5 opener: lush greenhouse dome", "keyframe_is_establishing": True}, "locked",
@@ -94,7 +106,12 @@ DIFFICULT = {6, 9, 11, 14, 17}
 
 def build():
     shots, t = [], 0.0
-    for sid, ch, dur, line, scale, src, extra, cam, env, act, tags in SHOTS:
+    key2id = {str(row[0]): i for i, row in enumerate(SHOTS, 1)}
+    for sid0, (key, ch, dur, line, scale, src, extra, cam, env, act, tags) in enumerate(SHOTS, 1):
+        sid = sid0
+        extra = dict(extra)
+        if "reuse_of" in extra and extra["reuse_of"].startswith("keyframe:shot"):
+            extra["reuse_of"] = "keyframe:shot%d" % key2id[extra["reuse_of"].split("shot")[1]]
         gen = 5 if sid == len(SHOTS) else 4
         stage = STAGE[ch]
         refs = [f"avatar:stage:{stage}", f"env:ch{max(1, ch)}"]
@@ -104,11 +121,11 @@ def build():
              "gen_duration": gen, "useful_window": [0.3, round(min(gen, 0.3 + dur + 0.6), 2)],
              "line": line, "scale": scale, "avatar": True, "avatar_stage": stage,
              "visual_source": src, **extra, "refs": refs,
-             "audio": "diegetic" if sid in DIEGETIC else "none",
+             "audio": "diegetic" if key in DIEGETIC else "none", "key": str(key),
              "environment": env, "camera": cam, "action": act,
-             "difficult": sid in DIFFICULT, "tags": tags}
-        if sid in DIEGETIC:
-            s["audio_note"] = DIEGETIC[sid]
+             "difficult": key in DIFFICULT, "tags": tags}
+        if key in DIEGETIC:
+            s["audio_note"] = DIEGETIC[key]
         shots.append(s)
         t += dur
     plan = {
@@ -175,7 +192,20 @@ def build():
         ],
         "shots": shots,
     }
-    json.dump(plan, open(os.path.join(HERE, "plan.json"), "w"), indent=1)
+    # Carry over production state recorded after the plan was first built (approvals, refs, costs).
+    path = os.path.join(HERE, "plan.json")
+    if os.path.exists(path):
+        old = json.load(open(path))
+        for k in ("cost_preflight", "narration"):
+            if k in old:
+                plan[k] = old[k]
+        if "voice" in old:
+            plan["voice"] = old["voice"]
+        for k in ("reference", "core_identity_locked", "notes"):
+            if k in old.get("avatar", {}):
+                plan["avatar"][k] = old["avatar"][k]
+        plan["notes"] = list(dict.fromkeys(plan["notes"] + old.get("notes", [])))
+    json.dump(plan, open(path, "w"), indent=1)
     print("total", round(t, 2), "shots", len(shots))
 
 

@@ -1,0 +1,77 @@
+{
+ "avatar_ref": {
+  "job_id": "42fbcc4f-9cf2-4971-a73f-e3230c9b2aa8",
+  "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/hf_20261002_193238_42fbcc4f-9cf2-4971-a73f-e3230c9b2aa8.png"
+ },
+ "stage_refs": {
+  "newborn": {
+   "job_id": "c3b30ceb-9bb3-43f9-b94e-7d7d6c261d12",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/hf_20261002_193941_c3b30ceb-9bb3-43f9-b94e-7d7d6c261d12.png"
+  },
+  "child": {
+   "job_id": "371b1f75-6ef6-4bfb-8999-ecc47d2b3d66",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/hf_20261002_193941_371b1f75-6ef6-4bfb-8999-ecc47d2b3d66.png"
+  },
+  "teen": {
+   "job_id": "712b3760-4a00-47ba-8d6a-1f63e1f73063",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/hf_20261002_193941_712b3760-4a00-47ba-8d6a-1f63e1f73063.png"
+  },
+  "adult22": {
+   "job_id": "765a97cd-00ac-4261-b8a1-63f5e3f62adb",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/hf_20261002_193942_765a97cd-00ac-4261-b8a1-63f5e3f62adb.png"
+  },
+  "adult30": {
+   "job_id": "3d04dc32-7ff2-4265-9669-e9887c4f8ba0",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/hf_20261002_193941_3d04dc32-7ff2-4265-9669-e9887c4f8ba0.png"
+  }
+ },
+ "narration": {
+  "ch1": {
+   "job_id": "e1fd2c43-6387-41c0-8528-afb0cb61d6c7",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/hf_20261002_193957_e1fd2c43-6387-41c0-8528-afb0cb61d6c7.wav"
+  },
+  "ch2": {
+   "job_id": "691bc585-6909-4717-b957-aa0553d59d78",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/hf_20261002_193957_691bc585-6909-4717-b957-aa0553d59d78.wav"
+  },
+  "ch3": {
+   "job_id": "aa44373d-9711-4b21-a50b-4f8f4c5dda1d",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/hf_20261002_193957_aa44373d-9711-4b21-a50b-4f8f4c5dda1d.wav"
+  },
+  "ch4": {
+   "job_id": "abc1ab8b-4fa5-4e70-8729-110f77683db1",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/hf_20261002_193957_abc1ab8b-4fa5-4e70-8729-110f77683db1.wav"
+  },
+  "ch5": {
+   "job_id": "15e5b7f8-a16b-4861-99cd-71c7e3be293d",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/hf_20261002_193957_15e5b7f8-a16b-4861-99cd-71c7e3be293d.wav"
+  }
+ },
+ "images": {
+  "prop": "bda07126-2694-40f0-9f84-62b7fea2a82d",
+  "env:ch1": "654e6b42-2918-4565-a0c3-bca80ae421e0",
+  "env:ch2": "8c63dede-95b3-4ddb-ad06-2b5830b7d945",
+  "env:ch3": "f6676040-850e-4a5a-9d77-cbc48e45f077",
+  "env:ch4": "e4e034f7-e958-4c4b-bfc9-c6299cfc2145",
+  "env:ch5": "7439021c-68af-4012-b029-f50ff187ea43",
+  "kf:1": "89cca5e5-4050-4dc7-b222-a3f9a67eb2ad",
+  "kf:3": "90f7a018-448c-4559-959d-8060e25fb580",
+  "kf:12": "f0052135-2479-452d-a235-22cd226c4d07",
+  "kf:19": "36c73bd9-1aa7-4605-b423-daaea71b5b38",
+  "kf:26": "2f79ee68-bd3f-4fbf-b9d9-1e1753aa06ce"
+ },
+ "videos": {},
+ "credits_spent": {
+  "images": 50.25,
+  "narration": 17.2
+ },
+ "narration_v2": {
+  "ch1": "b05a865f-11be-467f-9f37-3b86166048f2",
+  "ch2": "7c6df75c-a44a-446a-b2bc-dbfb92bf20c4",
+  "ch3": "b62b5c64-bcf9-49ab-a094-2d753eec7d0d",
+  "ch4": "00ea95a4-410e-4516-998f-b618a104dcec",
+  "ch5": "7a33c896-a13c-4d24-bda5-7e6bde4a57f3",
+  "joined_media_id": "47cd141c-0564-4721-9bf2-ab9c27fd20da",
+  "joined_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/47cd141c-0564-4721-9bf2-ab9c27fd20da.mp3"
+ }
+}

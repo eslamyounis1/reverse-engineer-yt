@@ -1,0 +1,23 @@
+group      what                                                         n     unit      cost
+image      avatar base reference                                        1     2.75      2.75
+image      avatar stage frames (edits of the approved reference)        5     2.75     13.75
+image      signature prop                                               1     2.75      2.75
+image      chapter establishing keyframes                               5     2.75     13.75
+image      KEYFRAME_REQUIRED scene keyframes                            3     2.75      8.25
+image      hook + payoff keyframes                                      2      4.5       9.0
+video      4s source clips, final, audio=False                         24       48      1152
+video      4s source clips, draft, audio=False                          4       12        48
+video      4s source clips, draft, audio=True                           1       12        12
+video      4s source clips, final, audio=True                           1       48        48
+video      5s source clips, final, audio=False                          1       60        60
+narration  narration take, chapter 1 (51 words)                         1      1.8       1.8
+narration  narration take, chapter 2 (45 words)                         1      1.7       1.7
+narration  narration take, chapter 3 (42 words)                         1      1.6       1.6
+narration  narration take, chapter 4 (46 words)                         1      1.8       1.8
+narration  narration take, chapter 5 (52 words)                         1      1.7       1.7
+
+estimated image cost                          50.25
+estimated video cost                         1320.0
+estimated narration cost                        8.6
+ESTIMATED TOTAL                             1378.85
+retry contingency (+20%, not included)       275.77
