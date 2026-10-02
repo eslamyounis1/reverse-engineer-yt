@@ -4,7 +4,56 @@
  "target_seconds": 55,
  "avatar": {
   "name": "birch",
-  "design": "hand-carved pale birch marionette, oversized glossy black bead eyes, visible brass pin joints, single teal knitted scarf as accent",
+  "design": "hand-carved pale birch-wood marionette, oversized glossy black bead eyes, visible brass pin joints, teal knitted scarf",
+  "spec": {
+   "silhouette": "small upright puppet figure; large round head (~1/4 of height), narrow torso, long thin limbs, scarf ends trailing",
+   "proportions": "head 1/4 of height as infant/child, 1/5 as teen/adult; eyes ~1/3 of face width",
+   "materials": "matte pale birch wood with visible grain, polished brass pin joints at shoulders/elbows/knees, faint dark wood knots",
+   "clothing": "teal knitted scarf (permanent accent); per-chapter garments listed in stage_changes",
+   "identifying_features": [
+    "oversized glossy black bead eyes",
+    "brass pin joints",
+    "teal knitted scarf",
+    "single dark wood knot on left cheek"
+   ],
+   "stage_changes": [
+    {
+     "chapter": 1,
+     "age": "newborn",
+     "clothing": "grey wool swaddle + scarf",
+     "state": "smooth unworn wood"
+    },
+    {
+     "chapter": 2,
+     "age": "child (6)",
+     "clothing": "oversized brass dive helmet, patched grey jumpsuit",
+     "state": "small scuffs"
+    },
+    {
+     "chapter": 3,
+     "age": "teen (16)",
+     "clothing": "fitted grey pilot jumpsuit, tool belt",
+     "state": "scratched varnish, one replaced brass pin"
+    },
+    {
+     "chapter": 4,
+     "age": "adult (30)",
+     "clothing": "crew officer jacket over jumpsuit",
+     "state": "water-darkened grain at hands and feet"
+    },
+    {
+     "chapter": 5,
+     "age": "adult (31)",
+     "clothing": "same jacket, salt-bleached, scarf faded",
+     "state": "sun-lit wood, first time dry and bright"
+    }
+   ]
+  },
+  "reference": {
+   "job_id": null,
+   "approved_by_user": false,
+   "stage_refs": {}
+  },
   "stages": [
    "newborn",
    "child",
@@ -14,7 +63,8 @@
  },
  "signature_prop": "small brass compass whose needle always points to the surface",
  "notes": [
-  "Example plan only. Timings are pre-narration estimates; Phase 4 retimes them to word timestamps."
+  "Example plan only. `dur` = final edited hold; `gen_duration` = Seedance source length (>=4s), trimmed to `useful_window` in assembly.",
+  "Timings are pre-narration estimates; Phase 5 retimes them to word timestamps."
  ],
  "chapters": [
   {
@@ -61,11 +111,22 @@
    "environment": "station medical bay, porthole full of dark water and drifting jellyfish",
    "camera": "locked",
    "action": "newborn marionette swaddled in a hammock as a pressure alarm light pulses red",
-   "keyframe": true,
    "difficult": false,
    "tags": [
     "hook"
-   ]
+   ],
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "hook frame: premise + avatar identity",
+   "refs": [
+    "avatar:stage:newborn",
+    "env:ch1"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.2
+   ],
+   "audio": "none"
   },
   {
    "id": 2,
@@ -79,11 +140,22 @@
    "environment": "nursery porthole, bioluminescent jellyfish",
    "camera": "push-in",
    "action": "tiny wooden hand presses the porthole glass as a jellyfish drifts close",
-   "keyframe": false,
    "difficult": false,
    "tags": [
     "plant"
-   ]
+   ],
+   "visual_source": "REUSE_REFERENCE",
+   "reuse_of": "keyframe:shot1",
+   "refs": [
+    "avatar:stage:newborn",
+    "env:ch1"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.2
+   ],
+   "audio": "none"
   },
   {
    "id": 3,
@@ -97,11 +169,23 @@
    "environment": "cramped galley, crew in grey jumpsuits",
    "camera": "locked",
    "action": "a crew member places a brass compass in the baby's lap; the needle swings upward",
-   "keyframe": true,
    "difficult": false,
    "tags": [
     "plant"
-   ]
+   ],
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "plant composition: crew hand-off of prop",
+   "refs": [
+    "avatar:stage:newborn",
+    "env:ch1",
+    "prop:compass"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.4
+   ],
+   "audio": "none"
   },
   {
    "id": 4,
@@ -115,11 +199,22 @@
    "environment": "steel corridor, condensation, dim teal light",
    "camera": "handheld",
    "action": "the corridor shudders, droplets fall, the hammock sways",
-   "keyframe": false,
    "difficult": false,
    "tags": [
     "interrupt"
-   ]
+   ],
+   "visual_source": "DIRECT_VIDEO",
+   "refs": [
+    "avatar:stage:newborn",
+    "env:ch1"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.2
+   ],
+   "audio": "diegetic",
+   "audio_note": "hull groan + dripping condensation sells the pressure interrupt; mixed under narration"
   },
   {
    "id": 5,
@@ -133,9 +228,20 @@
    "environment": "airlock chamber filling with water",
    "camera": "locked",
    "action": "child marionette in an oversized brass dive helmet waddles into rising water",
-   "keyframe": true,
    "difficult": false,
-   "tags": []
+   "tags": [],
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "chapter 2 opener: new environment + stage",
+   "refs": [
+    "avatar:stage:child",
+    "env:ch2"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.4
+   ],
+   "audio": "none"
   },
   {
    "id": 6,
@@ -149,9 +255,19 @@
    "environment": "open seafloor, station lights fading behind",
    "camera": "behind follow",
    "action": "the child swims away from the station into darkness, lamp beam cutting the water",
-   "keyframe": false,
    "difficult": true,
-   "tags": []
+   "tags": [],
+   "visual_source": "DIRECT_VIDEO",
+   "refs": [
+    "avatar:stage:child",
+    "env:ch2"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.6
+   ],
+   "audio": "none"
   },
   {
    "id": 7,
@@ -165,11 +281,22 @@
    "environment": "open water, giant silhouette below",
    "camera": "locked",
    "action": "a colossal squid silhouette glides under the tiny swimmer",
-   "keyframe": true,
    "difficult": true,
    "tags": [
     "interrupt"
-   ]
+   ],
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "foreground/background: giant silhouette under tiny avatar",
+   "refs": [
+    "avatar:stage:child",
+    "env:ch2"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.0
+   ],
+   "audio": "none"
   },
   {
    "id": 8,
@@ -183,9 +310,21 @@
    "environment": "inside helmet, fogged glass",
    "camera": "push-in",
    "action": "wooden fingers clench the brass compass, needle trembling",
-   "keyframe": false,
    "difficult": false,
-   "tags": []
+   "tags": [],
+   "visual_source": "REUSE_REFERENCE",
+   "reuse_of": "prop:compass",
+   "refs": [
+    "avatar:stage:child",
+    "env:ch2",
+    "prop:compass"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.2
+   ],
+   "audio": "none"
   },
   {
    "id": 9,
@@ -199,9 +338,20 @@
    "environment": "cockpit of a small sub, instrument glow",
    "camera": "front-mounted",
    "action": "teen marionette grips the controls as rock walls rush past the canopy",
-   "keyframe": true,
    "difficult": true,
-   "tags": []
+   "tags": [],
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "chapter 3 opener: cockpit design",
+   "refs": [
+    "avatar:stage:teen",
+    "env:ch3"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.4
+   ],
+   "audio": "none"
   },
   {
    "id": 10,
@@ -215,11 +365,22 @@
    "environment": "cockpit, green sonar screen",
    "camera": "locked",
    "action": "sonar screen fills with unknown shapes; the teen leans in",
-   "keyframe": false,
    "difficult": false,
    "tags": [
     "interrupt"
-   ]
+   ],
+   "visual_source": "REUSE_REFERENCE",
+   "reuse_of": "keyframe:shot9",
+   "refs": [
+    "avatar:stage:teen",
+    "env:ch3"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.4
+   ],
+   "audio": "none"
   },
   {
    "id": 11,
@@ -233,9 +394,19 @@
    "environment": "engine room, spraying leak",
    "camera": "handheld",
    "action": "wooden hands press a sealant patch over a hissing crack",
-   "keyframe": false,
    "difficult": false,
-   "tags": []
+   "tags": [],
+   "visual_source": "DIRECT_VIDEO",
+   "refs": [
+    "avatar:stage:teen",
+    "env:ch3"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.2
+   ],
+   "audio": "none"
   },
   {
    "id": 12,
@@ -249,9 +420,19 @@
    "environment": "control room, crew turning toward the teen",
    "camera": "locked",
    "action": "crew members turn toward the teen as an alarm board blinks",
-   "keyframe": false,
    "difficult": false,
-   "tags": []
+   "tags": [],
+   "visual_source": "DIRECT_VIDEO",
+   "refs": [
+    "avatar:stage:teen",
+    "env:ch3"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.4
+   ],
+   "audio": "none"
   },
   {
    "id": 13,
@@ -265,12 +446,23 @@
    "environment": "command deck, red alert light, message on screen",
    "camera": "locked",
    "action": "adult marionette reads a glowing evacuation notice, red light washing the deck",
-   "keyframe": true,
    "difficult": false,
    "tags": [
     "turn",
     "interrupt"
-   ]
+   ],
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "chapter 4 opener: diegetic on-screen notice",
+   "refs": [
+    "avatar:stage:adult",
+    "env:ch4"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.4
+   ],
+   "audio": "none"
   },
   {
    "id": 14,
@@ -284,9 +476,20 @@
    "environment": "docking bay crowded with crates and departing crew",
    "camera": "locked",
    "action": "crew carry crates toward an escape capsule; the marionette stands still among them",
-   "keyframe": false,
    "difficult": true,
-   "tags": []
+   "tags": [],
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "crowd composition with avatar isolated",
+   "refs": [
+    "avatar:stage:adult",
+    "env:ch4"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.4
+   ],
+   "audio": "none"
   },
   {
    "id": 15,
@@ -300,11 +503,21 @@
    "environment": "small cabin, faded photo of a sunny beach",
    "camera": "push-in",
    "action": "the marionette stares at a faded beach photo, joints trembling",
-   "keyframe": false,
    "difficult": false,
    "tags": [
     "turn"
-   ]
+   ],
+   "visual_source": "DIRECT_VIDEO",
+   "refs": [
+    "avatar:stage:adult",
+    "env:ch4"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.4
+   ],
+   "audio": "none"
   },
   {
    "id": 16,
@@ -318,9 +531,20 @@
    "environment": "nursery porthole from day one, jellyfish glowing",
    "camera": "locked",
    "action": "the adult curls by the same porthole, jellyfish drifting past",
-   "keyframe": false,
    "difficult": false,
-   "tags": []
+   "tags": [],
+   "visual_source": "REUSE_REFERENCE",
+   "reuse_of": "keyframe:shot1",
+   "refs": [
+    "avatar:stage:adult",
+    "env:ch4"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.2
+   ],
+   "audio": "none"
   },
   {
    "id": 17,
@@ -334,9 +558,20 @@
    "environment": "capsule interior, black water outside",
    "camera": "locked",
    "action": "the marionette grips a seat strap as pressure gauges spin",
-   "keyframe": true,
    "difficult": false,
-   "tags": []
+   "tags": [],
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "chapter 5 opener: capsule interior",
+   "refs": [
+    "avatar:stage:adult",
+    "env:ch5"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.4
+   ],
+   "audio": "none"
   },
   {
    "id": 18,
@@ -350,11 +585,21 @@
    "environment": "capsule rising through gradient water, light rays above",
    "camera": "locked",
    "action": "the capsule ascends as the water lightens from black to blue",
-   "keyframe": false,
    "difficult": true,
    "tags": [
     "interrupt"
-   ]
+   ],
+   "visual_source": "DIRECT_VIDEO",
+   "refs": [
+    "avatar:stage:adult",
+    "env:ch5"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.2
+   ],
+   "audio": "none"
   },
   {
    "id": 19,
@@ -368,11 +613,21 @@
    "environment": "hatch opening, blinding sunlight",
    "camera": "push-in",
    "action": "sunlight floods the bead eyes; the marionette raises a hand to shield them",
-   "keyframe": true,
    "difficult": false,
    "tags": [
     "interrupt"
-   ]
+   ],
+   "visual_source": "DIRECT_VIDEO",
+   "refs": [
+    "avatar:stage:adult",
+    "env:ch5"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.4
+   ],
+   "audio": "none"
   },
   {
    "id": 20,
@@ -386,9 +641,21 @@
    "environment": "the compass in the palm under open sky",
    "camera": "locked",
    "action": "the brass needle settles and stops, pointing straight up",
-   "keyframe": false,
    "difficult": false,
-   "tags": []
+   "tags": [],
+   "visual_source": "REUSE_REFERENCE",
+   "reuse_of": "prop:compass",
+   "refs": [
+    "avatar:stage:adult",
+    "env:ch5",
+    "prop:compass"
+   ],
+   "gen_duration": 4,
+   "useful_window": [
+    0.3,
+    3.2
+   ],
+   "audio": "none"
   },
   {
    "id": 21,
@@ -402,11 +669,31 @@
    "environment": "capsule floating on calm sunlit ocean, open sky",
    "camera": "push-in",
    "action": "the marionette stands on the capsule holding the compass to the sky as gulls circle",
-   "keyframe": true,
    "difficult": false,
    "tags": [
     "payoff"
-   ]
+   ],
+   "visual_source": "KEYFRAME_REQUIRED",
+   "keyframe_reason": "payoff frame: prop callback, highest quality",
+   "refs": [
+    "avatar:stage:adult",
+    "env:ch5"
+   ],
+   "gen_duration": 5,
+   "useful_window": [
+    0.3,
+    5
+   ],
+   "audio": "none"
   }
- ]
+ ],
+ "cost_preflight": {
+  "image": null,
+  "video": null,
+  "narration": null,
+  "total": null,
+  "currency": "credits",
+  "approved_by_user": false,
+  "lines": []
+ }
 }

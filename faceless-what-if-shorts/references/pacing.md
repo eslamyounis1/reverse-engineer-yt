@@ -24,6 +24,17 @@ the references.
 | Final chapter length | 12–17 s | 12–17 s | WARN outside |
 | Shots per chapter | 3.0–5.4 | 3–6 | WARN outside |
 
+## Edited holds vs Seedance source clips
+
+- Every duration in this file is a **final edited hold** (`dur`), measured on the finished cut.
+- Seedance 2.5 generates ≥ 4 s per clip, so each shot is generated longer (`gen_duration`,
+  4 s by default and 5 s for the final shot) and trimmed in assembly to `useful_window[0]` +
+  `dur`.
+- The validator checks pacing on `dur` only. It separately checks that `gen_duration` is 4–30 s
+  and that `useful_window` fits inside the source clip and covers `dur`.
+- After narration retiming, confirm each new `dur` still fits its `useful_window`. Widen the
+  window, or raise `gen_duration`, **before** generating video.
+
 ## Narration speed
 
 - Observed 3.36–4.53 words/s (mean 3.87), about 200–270 wpm. That is faster than default TTS.
@@ -45,6 +56,7 @@ the references.
 4. Carry-over shots (`line` empty or a continuation) split their parent clause's time at a
    natural comma or the midpoint.
 5. If any `dur > 4.0` (or > 5.0 for the final shot), insert a carry-over shot. Do not stretch.
+   If a `dur` grows past its `useful_window`, widen the window or raise `gen_duration`.
 6. If any `dur < 1.0`, merge it with a neighbour, unless it is tagged `interrupt` (an impact).
 7. Rerun `validate_plan.py`.
 

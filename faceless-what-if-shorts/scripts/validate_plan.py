@@ -3,10 +3,13 @@
 against the production rules measured from the reference set.
 
 Usage:
-  python3 validate_plan.py plan.json
+  python3 validate_plan.py plan.json                  # plan rules (pre-production)
+  python3 validate_plan.py plan.json --gate           # + gate before ANY paid job: cost preflight approved
+  python3 validate_plan.py plan.json --gate-keyframes # + gate before scene keyframes: approved avatar ref
   python3 validate_plan.py --from-analysis final_analysis.json
 
-Exit code 1 if any FAIL. Prints FAIL / WARN / OK lines plus a measured-vs-target table.
+All pacing checks use FINAL EDITED shot durations (`dur`), never the raw Seedance source
+length (`gen_duration`, >= 4 s). Exit code 1 if any FAIL.
 """
 import json
 import re
@@ -22,6 +25,14 @@ STAMP_RE = re.compile(
 )
 CTA_RE = re.compile(r"\b(subscribe|follow (me|us|for)|like (and|&) |comment below|link in bio)\b", re.I)
 ONSET_TARGETS = [4, 17, 37, 57, 75]
+SEEDANCE_MIN_S, SEEDANCE_MAX_S = 4, 30
+VISUAL_SOURCES = {"KEYFRAME_REQUIRED", "DIRECT_VIDEO", "REUSE_REFERENCE"}
+AUDIO_MODES = {"none", "diegetic"}
+AVATAR_SPEC_FIELDS = ["silhouette", "proportions", "materials", "clothing", "identifying_features",
+                      "stage_changes"]
+# Reference-channel design language the new avatar / prop must not reproduce.
+FORBIDDEN_DESIGN = re.compile(r"\b(skeleton|skeletal|skull|bones?|ribs?|glass|glassy|translucent|"
+                              r"transparent|see-through|x-ray|lollipop)\b", re.I)
 MEDIUM_FAMILY = {"Medium", "Medium Close-Up"}
 CLOSE = {"Close-Up", "Extreme Close-Up"}
 
@@ -49,6 +60,84 @@ def from_analysis(doc):
     return {"shots": shots, "_analysis": True}
 
 
+def production_checks(plan, shots, fails, warns, rows):
+    """Execution rules: Seedance source clips + trim, keyframe policy, audio policy, avatar spec."""
+    # --- 1. Seedance minimum duration: generate >= 4 s, trim to the planned edited hold ---
+    for s in shots:
+        sid, dur = s["id"], s["dur"]
+        gen = s.get("gen_duration")
+        win = s.get("useful_window")
+        if gen is None or win is None:
+            fails.append(f"shot {sid}: missing gen_duration / useful_window (source clip spec)")
+            continue
+        if not (isinstance(gen, int) and SEEDANCE_MIN_S <= gen <= SEEDANCE_MAX_S):
+            fails.append(f"shot {sid}: gen_duration {gen} must be an integer {SEEDANCE_MIN_S}–{SEEDANCE_MAX_S} s")
+            continue
+        a, b = win
+        if not (0 <= a < b <= gen):
+            fails.append(f"shot {sid}: useful_window {win} must lie inside the {gen}s source clip")
+        elif b - a + 1e-6 < dur:
+            fails.append(f"shot {sid}: useful_window {win} ({b - a:.2f}s) shorter than edited hold {dur}s")
+        elif a < 0.15:
+            warns.append(f"shot {sid}: useful_window starts at {a}s; Seedance first frames often settle, "
+                         f"start at >= 0.2s")
+    # --- 5. Keyframe policy ---
+    srcs = [s.get("visual_source") for s in shots]
+    bad = [s["id"] for s in shots if s.get("visual_source") not in VISUAL_SOURCES]
+    if bad:
+        fails.append(f"visual_source missing/invalid on shots {bad} (KEYFRAME_REQUIRED|DIRECT_VIDEO|REUSE_REFERENCE)")
+    for s in shots:
+        if s.get("visual_source") == "REUSE_REFERENCE" and not s.get("reuse_of"):
+            fails.append(f"shot {s['id']}: REUSE_REFERENCE needs reuse_of (existing avatar/env/keyframe ref)")
+        if s.get("visual_source") == "KEYFRAME_REQUIRED" and not s.get("keyframe_reason"):
+            warns.append(f"shot {s['id']}: KEYFRAME_REQUIRED without keyframe_reason")
+    for tag, s in (("hook", shots[0]), ("payoff", shots[-1])):
+        if s.get("visual_source") != "KEYFRAME_REQUIRED":
+            warns.append(f"{tag} shot {s['id']} is not KEYFRAME_REQUIRED (it is the most important frame)")
+    n_kf = srcs.count("KEYFRAME_REQUIRED")
+    pct_kf = round(100 * n_kf / len(shots))
+    rows.append(("keyframe_required_shots", f"{n_kf} ({pct_kf}%)", "only where control is needed; <=60%"))
+    rows.append(("direct_video / reuse_reference", f"{srcs.count('DIRECT_VIDEO')} / {srcs.count('REUSE_REFERENCE')}", "—"))
+    if pct_kf > 60:
+        warns.append(f"{pct_kf}% of shots are KEYFRAME_REQUIRED: do not keyframe every shot by default")
+    # --- 4. Avatar reuse: every avatar shot must point at the approved avatar reference ---
+    for s in shots:
+        if s.get("avatar") and not any(str(r).startswith("avatar") for r in s.get("refs", [])):
+            fails.append(f"shot {s['id']}: avatar in frame but refs has no avatar reference (reuse AVATAR_REF/stage)")
+    # --- 2. Audio policy ---
+    for s in shots:
+        mode = s.get("audio", "none")
+        if mode not in AUDIO_MODES:
+            fails.append(f"shot {s['id']}: audio must be 'none' or 'diegetic'")
+        elif mode == "diegetic" and not s.get("audio_note"):
+            fails.append(f"shot {s['id']}: diegetic audio must be justified in audio_note")
+    n_dieg = sum(s.get("audio") == "diegetic" for s in shots)
+    rows.append(("diegetic_audio_shots", n_dieg, "default 0; generate_audio true only on these"))
+    # --- 4. Avatar specification + originality guard ---
+    av = plan.get("avatar", {})
+    spec = av.get("spec", {})
+    missing = [f for f in AVATAR_SPEC_FIELDS if not spec.get(f)]
+    if missing:
+        fails.append(f"avatar.spec missing fields: {missing}")
+    stages = {c.get("chapter") for c in spec.get("stage_changes", [])}
+    if spec.get("stage_changes") is not None and not {1, 2, 3, 4, 5} <= stages:
+        fails.append("avatar.spec.stage_changes must cover chapters 1–5")
+    text = json.dumps(spec) + " " + str(av.get("design", "")) + " " + str(plan.get("signature_prop", ""))
+    hits = sorted({m.group(0).lower() for m in FORBIDDEN_DESIGN.finditer(text)})
+    if hits:
+        fails.append(f"avatar/prop reuses reference-channel design language: {hits}")
+
+
+def gate_checks(plan, fails):
+    """Hard gate before ANY paid Higgsfield job (run with --gate)."""
+    cost = plan.get("cost_preflight", {})
+    for k in ("image", "video", "narration", "total"):
+        if cost.get(k) is None:
+            fails.append(f"GATE: cost_preflight.{k} missing — run the cost preflight (SKILL.md Phase 3)")
+    if not cost.get("approved_by_user"):
+        fails.append("GATE: cost_preflight.approved_by_user is not true — ask the user before paid jobs")
+
+
 def main(argv):
     analysis = "--from-analysis" in argv
     path = [a for a in argv if not a.startswith("--")][0]
@@ -73,12 +162,12 @@ def main(argv):
     check("duration_s", total, 50 <= total <= 60, "50–60", 45 <= total <= 64)
     check("shots", n, 0.33 * total <= n <= 0.48 * total, "≈0.4/s (20–26 @55s)", 15 <= n <= 30)
     mean_hold = round(statistics.mean(durs), 2)
-    check("mean_hold_s", mean_hold, 2.2 <= mean_hold <= 2.8, "2.2–2.8", mean_hold <= 3.35)
+    check("mean_edited_hold_s", mean_hold, 2.2 <= mean_hold <= 2.8, "2.2–2.8", mean_hold <= 3.35)
     pct3 = round(100 * sum(d <= 3.0 for d in durs) / n)
     check("pct_shots_le_3s", pct3, pct3 >= 85, "≥85%", pct3 >= 67)
     body_max = max(durs[:-1]) if n > 1 else durs[0]
-    check("max_hold_s (excl. final)", body_max, body_max <= 4.0, "≤4.0", body_max <= (5.0 if analysis else 4.0))
-    check("final_shot_s", durs[-1], durs[-1] <= 5.0, "≤5.0", durs[-1] <= 5.5)
+    check("max_edited_hold_s (excl. final)", body_max, body_max <= 4.0, "≤4.0", body_max <= (5.0 if analysis else 4.0))
+    check("final_edited_shot_s", durs[-1], durs[-1] <= 5.0, "≤5.0", durs[-1] <= 5.5)
     cuts10 = round(10 * (n - 1) / total, 2)
     check("cuts_per_10s", cuts10, 3.5 <= cuts10 <= 4.5, "3.5–4.5", 2.6 <= cuts10 <= 5.5)
     short = [s["id"] for s in shots[:-1] if s["dur"] < 1.5 and not
@@ -167,10 +256,13 @@ def main(argv):
                 fails.append(f"timeline gap/overlap at shot {s['id']}: start {s['start']} expected {round(t, 2)}")
                 break
             t = s["start"] + s["dur"]
-        kf = [s["id"] for s in shots if s.get("keyframe")]
-        if shots[0].get("keyframe") is False or shots[-1].get("keyframe") is False:
-            warns.append("hook and payoff shots should have GPT Image 2.5 keyframes")
-        rows.append(("keyframed_shots", len(kf), "hook, payoff, chapter openers, complex comps"))
+        production_checks(plan, shots, fails, warns, rows)
+        if "--gate" in argv or "--gate-keyframes" in argv:
+            gate_checks(plan, fails)
+        if "--gate-keyframes" in argv:
+            ref = plan.get("avatar", {}).get("reference", {})
+            if not ref.get("job_id") or not ref.get("approved_by_user"):
+                fails.append("GATE: avatar.reference.job_id + approved_by_user required before scene keyframes")
 
     print(f"{'metric':32} {'measured':>10}   target")
     for name, value, target in rows:

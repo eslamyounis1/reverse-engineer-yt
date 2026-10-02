@@ -14,7 +14,8 @@ analysis/
 faceless-what-if-shorts/  the generated Skill
   SKILL.md                pipeline: premise → script → plan → GPT Image 2.5 → Seedance 2.5 → narration → assembly → captions → QC
   references/             hooks, narrative, pacing, visual-language, retention
-  scripts/validate_plan.py  plan / finished-video rule checker
+  scripts/validate_plan.py  plan / finished-video rule checker + production gates
+  scripts/cost_plan.py      cost preflight: priced configs for single-tool get_cost, totals
   scripts/assemble_short.py sandbox assembler (tested locally with ffmpeg)
   examples/example_plan.json  original example plan (0 FAIL / 0 WARN)
 ```

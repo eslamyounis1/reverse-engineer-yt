@@ -5,8 +5,15 @@ timeline.json:
 {
   "fps": 30, "width": 1080, "height": 1920,
   "narration_url": "https://... (wav/mp3)",
-  "shots": [{"url": "https://...mp4", "in": 0.2, "dur": 2.4, "label": "DAY 1"}, ...]
+  "shots": [{"url": "https://...mp4", "in": 0.3, "dur": 2.4, "label": "DAY 1",
+             "gen_duration": 4, "diegetic": false, "diegetic_db": -20}, ...]
 }
+`dur` is the FINAL EDITED hold (1–5 s). The Seedance source clip is longer (>= 4 s);
+`in` = plan.useful_window[0], and the shot is trimmed to [in, in+dur]. A window that runs past
+the source clip is a hard failure (no silent freeze-frame padding).
+Seedance audio is DROPPED unless the shot is marked "diegetic": true; diegetic audio is
+attenuated (diegetic_db, default -20 dB), ducked under the narration (sidechain) and the
+receipts assert it peaks >= 6 dB below the narration.
 Usage: python3 assemble_short.py timeline.json --out final_clean.mp4 [--lufs -14] [--no-labels]
 Writes ./narration.wav (for the subtitles step), the MP4, and prints RECEIPTS. Idempotent.
 """
@@ -53,6 +60,19 @@ def probe(path, stream):
     return vals[0]
 
 
+def has_audio(path):
+    out = run(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=index",
+               "-of", "csv=p=0", path]).strip()
+    return bool(out)
+
+
+def max_volume(path):
+    p = subprocess.run(["ffmpeg", "-v", "info", "-i", path, "-af", "volumedetect", "-f", "null", "-"],
+                       capture_output=True, text=True)
+    m = re.search(r"max_volume: (-?[\d.]+) dB", p.stderr)
+    return float(m.group(1)) if m else -91.0
+
+
 def font_file():
     for q in ("Montserrat:bold", "TikTok Sans:bold", "DejaVu Sans:bold", "sans:bold"):
         try:
@@ -80,15 +100,21 @@ def main(argv):
     run(["ffmpeg", "-y", "-v", "error", "-i", "narration_src", "-ac", "1", "-ar", "48000", "narration.wav"])
     narr = probe("narration.wav", "a:0")
 
-    seg_list, planned = [], 0.0
+    seg_list, aud_list, planned, diegetic_n = [], [], 0.0, 0
     for i, s in enumerate(tl["shots"], 1):
         src = f"clips/shot{i:02d}.mp4"
         fetch(s["url"], src)
         frames = max(1, round(s["dur"] * fps))
         planned += frames / fps
         cdur = probe(src, "v:0")
-        start = min(float(s.get("in", 0.2)), max(0.0, cdur - s["dur"]))
-        pad = max(0.0, start + s["dur"] - cdur) + 0.5
+        start = float(s.get("in", 0.3))
+        if start + s["dur"] > cdur + 0.05:
+            raise SystemExit(f"shot {i}: trim window {start:.2f}+{s['dur']:.2f}s exceeds source clip "
+                             f"{cdur:.2f}s: fix useful_window or regenerate a longer clip")
+        if cdur < 3.9:
+            print(f"WARN shot {i}: source clip {cdur:.2f}s is shorter than the 4 s Seedance minimum",
+                  file=sys.stderr)
+        pad = 0.1  # frame-rounding safety only
         vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={fps},setsar=1,"
               f"tpad=stop_mode=clone:stop_duration={pad:.2f}")
         label = re.sub(r"[^A-Za-z0-9 ]", "", s.get("label") or "").upper().strip()
@@ -100,7 +126,20 @@ def main(argv):
              "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p",
              "-r", str(fps), seg])
         seg_list.append(seg)
-        print(f"shot {i:02d}: in {start:.2f}s dur {frames/fps:.2f}s{'  label ' + label if label else ''}",
+        # per-shot audio bed: diegetic clip audio (attenuated) or digital silence
+        wav = f"segs/aud{i:02d}.wav"
+        if s.get("diegetic") and has_audio(src):
+            run(["ffmpeg", "-y", "-v", "error", "-ss", f"{start:.3f}", "-i", src, "-vn", "-ac", "1", "-ar", "48000",
+                 "-af", f"volume={float(s.get('diegetic_db', -20))}dB,apad", "-t", f"{frames/fps:.3f}", wav])
+            diegetic_n += 1
+        else:
+            if s.get("diegetic"):
+                print(f"WARN shot {i}: marked diegetic but source has no audio stream", file=sys.stderr)
+            run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=mono",
+                 "-t", f"{frames/fps:.3f}", wav])
+        aud_list.append(wav)
+        print(f"shot {i:02d}: source {cdur:.2f}s -> edited in {start:.2f}s dur {frames/fps:.2f}s"
+              f"{'  diegetic' if s.get('diegetic') else ''}{'  label ' + label if label else ''}",
               file=sys.stderr)
 
     with open("segs/list.txt", "w") as f:
@@ -111,10 +150,27 @@ def main(argv):
     if narr > vdur + 0.05:
         raise SystemExit(f"narration {narr:.2f}s longer than picture {vdur:.2f}s: extend final shot dur")
 
-    run(["ffmpeg", "-y", "-v", "error", "-i", "video_only.mp4", "-i", "narration.wav",
-         "-filter_complex", f"[1:a]loudnorm=I={lufs}:TP=-1.5:LRA=11,apad=whole_dur={vdur:.3f}[a]",
-         "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
-         "-t", f"{vdur:.3f}", "-movflags", "+faststart", out])
+    narr_chain = f"[1:a]loudnorm=I={lufs}:TP=-1.5:LRA=11,aresample=48000,apad=whole_dur={vdur:.3f}"
+    sfx_peak = narr_peak = None
+    if diegetic_n:
+        with open("segs/alist.txt", "w") as f:
+            f.writelines(f"file '{os.path.basename(p)}'\n" for p in aud_list)
+        run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", "segs/alist.txt",
+             "-c:a", "pcm_s16le", "diegetic_bed.wav"])
+        # narration keys a sidechain compressor on the diegetic bed, then both are summed
+        fc = (f"{narr_chain},asplit=2[nk][nm];[2:a]aresample=48000[bed];"
+              f"[bed][nk]sidechaincompress=threshold=0.02:ratio=10:attack=5:release=300[duck];"
+              f"[nm][duck]amix=inputs=2:normalize=0:duration=first[a]")
+        run(["ffmpeg", "-y", "-v", "error", "-i", "video_only.mp4", "-i", "narration.wav", "-i", "diegetic_bed.wav",
+             "-filter_complex", fc, "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+             "-ar", "48000", "-t", f"{vdur:.3f}", "-movflags", "+faststart", out])
+        sfx_peak, narr_peak = max_volume("diegetic_bed.wav"), max_volume("narration.wav")
+        assert sfx_peak <= narr_peak - 6, f"diegetic bed peak {sfx_peak} dB not >= 6 dB under narration {narr_peak} dB"
+    else:
+        run(["ffmpeg", "-y", "-v", "error", "-i", "video_only.mp4", "-i", "narration.wav",
+             "-filter_complex", f"{narr_chain}[a]",
+             "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
+             "-t", f"{vdur:.3f}", "-movflags", "+faststart", out])
     ov, oa = probe(out, "v:0"), probe(out, "a:0")
     assert abs(ov - oa) <= 0.2, f"A/V mismatch {ov} vs {oa}"
     assert abs(ov - planned) <= 0.2, f"duration {ov} != planned {planned}"
@@ -123,6 +179,11 @@ def main(argv):
     print(f"  shots     {len(seg_list)}  mean hold {planned/len(seg_list):.2f}s")
     print(f"  narration narration.wav  {narr:.2f}s  (tail {vdur-narr:.2f}s)")
     print(f"  labels    {'on' if labels and font else 'off'}")
+    if diegetic_n:
+        print(f"  diegetic  {diegetic_n} shot(s), bed peak {sfx_peak:.1f} dB vs narration peak {narr_peak:.1f} dB "
+              f"(pre-duck; ducked under speech)")
+    else:
+        print("  diegetic  none (all Seedance audio dropped)")
     print("  DONE")
 
 

@@ -30,6 +30,39 @@ signature.
 Write the recipe as one line in `plan.avatar.design`, e.g.:
 `hand-carved pale birch marionette, oversized glossy black bead eyes, visible wooden joints, single teal scarf as accent`.
 
+### 1a. Avatar specification (required in `plan.avatar.spec`, checked by the validator)
+
+| Field | Content |
+|---|---|
+| `silhouette` | Outline readable at thumbnail size: head/body shape, distinctive protrusions (scarf ends, ears, antenna) |
+| `proportions` | Head-to-height ratio per age stage; eye size relative to face |
+| `materials` | Surface material(s), finish and texture: the main identity carrier |
+| `clothing` | The permanent accent item plus the base wardrobe logic (per-chapter garments go in `stage_changes`) |
+| `identifying_features` | 3–5 **non-branded** features that must survive every stage (eye type, joint style, a mark, the accent colour) |
+| `stage_changes` | One entry per chapter 1–5: `age`, `clothing`, `state` (wear, damage, glow). Only these change. |
+
+**Originality guard:** the spec, design and signature prop must not use the reference channel's
+design language. `validate_plan.py` FAILs on skeleton, skeletal, skull, bones, ribs, glass,
+glassy, translucent, transparent, see-through, x-ray and lollipop.
+
+### 1b. Reference lock (do not re-describe from scratch)
+
+1. **Avatar reference:** GPT Image 2.5 flare, from `spec`. User approval goes into
+   `avatar.reference.job_id` and `approved_by_user`.
+2. **Stage frames:** GPT Image 2.5 **sunburst** edits *of that reference*, one per
+   `stage_changes` entry.
+   - Change only age, clothing and state; keep the silhouette, materials, eyes and identifying
+     features.
+   - Store them in `avatar.reference.stage_refs`.
+3. **Every later image or video with the avatar in frame** passes its stage ref (or the base
+   reference) as `image_references`, listed in the shot's `refs` as `avatar:stage:<stage>`.
+   - Text prompts only name the stage and action ("the character from the first reference, now
+     a teen").
+   - Do not re-describe the whole design; long re-descriptions cause drift.
+4. **Drift check:** compare each new frame with the approved reference on silhouette, material,
+   eyes and identifying features. Regenerate on a mismatch. The approved reference is always
+   the comparison target, not the previous frame.
+
 ## 2. Signature prop (plant → payoff)
 
 - **Observed:** the swirl lollipop appears in 3/5 references, in the first and/or last frame.
@@ -92,61 +125,92 @@ Write the recipe as one line in `plan.avatar.design`, e.g.:
 
 ## 5. Prompt recipes
 
-### GPT Image 2.5: avatar base sheet (Phase 3)
+### GPT Image 2.5: avatar base sheet (Phase 4)
 
 ```
 model gpt_image_2_5 · variant flare · quality high · resolution 2k · aspect_ratio 9:16
 Character reference sheet on a neutral warm-grey studio backdrop: {avatar.design}.
+Silhouette: {spec.silhouette}. Proportions: {spec.proportions}. Materials: {spec.materials}.
+Clothing: {spec.clothing} + {stage_changes[chapter 1].clothing}. Identifying features: {spec.identifying_features}.
 Three views in one vertical image: full body front (top), three-quarter view (middle),
 face close-up showing the oversized {eye spec} (bottom). Consistent proportions, no text,
 no logos. {GLOBAL STYLE LOCK}
 ```
 
-### GPT Image 2.5: stage frame (sunburst edit from AVATAR_REF)
+### GPT Image 2.5: stage frame (sunburst edit of the approved reference)
 
 ```
-model gpt_image_2_5 · variant sunburst · quality high · medias [image_references: AVATAR_REF]
-Same character, identical material, eye design, accent colour and proportions style.
-Change only: age stage = {stage}, body = {build}, wardrobe = {wardrobe}, wear = {marks}.
-Full body, neutral backdrop, 9:16.
+model gpt_image_2_5 · variant sunburst · quality high · resolution 2k · aspect_ratio 9:16
+medias [image_references: {avatar.reference.job_id}]
+Same character: identical silhouette, materials, eyes and identifying features
+({spec.identifying_features}). Change only: age = {stage_changes[n].age},
+clothing = {stage_changes[n].clothing}, state = {stage_changes[n].state}.
+Full body, neutral backdrop.
 ```
 
-### GPT Image 2.5: scene keyframe
+### GPT Image 2.5: scene keyframe (`KEYFRAME_REQUIRED` shots only)
 
 ```
-model gpt_image_2_5 · variant flare · quality high (xhigh for hook/payoff) · 9:16
-medias [image_references: {stage frame}, image_references: {chapter establishing keyframe}]
-{SCALE} shot. {avatar.design} at {stage}, {pose/action at its peak}, positioned {placement}.
+model gpt_image_2_5 · variant flare · quality high (xhigh for hook/payoff) · resolution 2k · 9:16
+medias [image_references: {stage ref}, image_references: {chapter establishing frame}]
+{SCALE} shot. The character from the first reference, {pose/action at its peak}, positioned {placement}.
 {Environment}, {lighting key}. {Foreground/background subject if any}. {Prop if plant/payoff}.
 Keep the bottom 17% of the frame visually quiet for captions. No text unless specified:
 {diegetic text exact string}. {GLOBAL STYLE LOCK}
 ```
 
-### Seedance 2.5: shot from keyframe
+Every Seedance shot uses:
+
+- `duration = gen_duration`, which is **≥ 4 s**. Never request the 1–3 s edited hold; assembly
+  trims to `useful_window`.
+- `generate_audio: false`, unless the shot is `"audio": "diegetic"`.
+
+**Window phrasing.** Write the action inside `useful_window [a, b]`:
+"From {a} s to {b} s: {action}. After that the motion settles and holds."
+
+### Seedance 2.5: `KEYFRAME_REQUIRED` (from keyframe)
 
 ```
 model seedance_2_5 · mode omni_reference · medias [start_image: {keyframe}]
-duration 4 · resolution 1080p · aspect_ratio 9:16 · generate_audio false
-{Camera move}. Within the first 2 seconds: {single clear action}. {Secondary motion: dust,
+duration {gen_duration} · resolution 1080p · aspect_ratio 9:16 · generate_audio false
+{Camera move}. From {a}s to {b}s: {single clear action}. {Secondary motion: dust,
 sparks, rain, crowd}. The character keeps its exact design from the start image.
 Stylized 3D animated film look, no cuts, no text.
 ```
 
-### Seedance 2.5: shot without keyframe
+### Seedance 2.5: `DIRECT_VIDEO` (references only)
 
 ```
 model seedance_2_5 · mode omni_reference
-medias [image_references: {stage frame}, image_references: {chapter establishing keyframe}]
-duration 4 · resolution 1080p · aspect_ratio 9:16 · generate_audio false
+medias [image_references: {stage ref}, image_references: {chapter establishing frame}]
+duration {gen_duration} · resolution 1080p · aspect_ratio 9:16 · generate_audio false
 {SCALE} shot of the character from the first reference, in the world of the second reference.
-{Camera}. Within the first 2 seconds: {action}. Single continuous shot, no cuts, no text.
+{Camera}. From {a}s to {b}s: {action}. Single continuous shot, no cuts, no text.
 ```
+
+### Seedance 2.5: `REUSE_REFERENCE`
+
+```
+model seedance_2_5 · mode omni_reference
+medias [start_image: {reuse_of keyframe}]   or   [image_references: {reuse_of prop/env}, image_references: {stage ref}]
+duration {gen_duration} · resolution 1080p · aspect_ratio 9:16 · generate_audio false
+{SCALE} shot reusing the referenced frame/world. {Camera}. From {a}s to {b}s: {new action}.
+Single continuous shot, no cuts, no text.
+```
+
+### Diegetic-audio shot (only with `"audio": "diegetic"` + `audio_note`)
+
+Same recipe, but with `generate_audio: true`. Append:
+"Sound: {audio_note: e.g. deep metal groan, water dripping}. No speech, no voices, no music."
+Assembly attenuates the clip audio (default −20 dB) and ducks it under the narration.
 
 ### Difficult-shot draft loop
 
 1. Submit with `draft: true` (480p).
-2. Grab frames at 0.5 / 1.5 / 2.5 s in the sandbox (`ffmpeg -ss … -frames:v 1`) and check:
-   identity match, framing, that the action peaks before 2.5 s, and hands, faces and text.
+2. Grab frames at `a`, the midpoint and `b` of `useful_window` in the sandbox
+   (`ffmpeg -ss … -frames:v 1`) and check: identity against the approved avatar reference,
+   framing, that the action happens inside the window, and hands, faces and text.
+   - If the action is good but shifted, move `useful_window` instead of redrafting.
 3. If it passes, finalize with `draft_job_id` at 1080p. If it fails, revise the prompt and
    redraft, at most twice before you split the shot.
 
