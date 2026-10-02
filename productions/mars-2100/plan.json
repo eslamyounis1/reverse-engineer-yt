@@ -57,9 +57,16 @@
    ]
   },
   "reference": {
-   "job_id": null,
+   "job_id": "42fbcc4f-9cf2-4971-a73f-e3230c9b2aa8",
    "approved_by_user": false,
-   "stage_refs": {}
+   "stage_refs": {},
+   "model": "gpt_image_2_5",
+   "variant": "flare",
+   "quality": "high",
+   "resolution": "2k",
+   "size": "1520x2688",
+   "credits": 2.75,
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/hf_20261002_193238_42fbcc4f-9cf2-4971-a73f-e3230c9b2aa8.png"
   },
   "stages": [
    "newborn",
@@ -191,7 +198,8 @@
     "cost": 1.7
    }
   ],
-  "approved_by_user": false
+  "approved_by_user": true,
+  "approved_note": "User approved 2026-10-02; scope: avatar reference only for now"
  },
  "notes": [
   "Timings are pre-narration estimates; Phase 5 retimes them to Whisper word timestamps.",
