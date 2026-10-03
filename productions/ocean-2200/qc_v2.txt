@@ -1,0 +1,30 @@
+metric                             measured   target
+duration_s                             52.0   50–60
+shots                                    23   ≈0.4/s (20–26 @55s)
+mean_edited_hold_s                     2.26   2.2–2.8
+pct_shots_le_3s                          96   ≥85%
+max_edited_hold_s (excl. final)         3.0   ≤4.0
+final_edited_shot_s                     4.0   ≤5.0
+cuts_per_10s                           4.23   3.5–4.5
+hook_words                               12   10–14
+hook_opener                            True   'What (would happen) if you…'
+chapter_count                             5   5
+first_stamp_s                           2.0   1.5–3.0
+ch1_onset_pct                             4   4±6
+ch2_onset_pct                            19   17±6
+ch3_onset_pct                            35   37±6
+ch4_onset_pct                            56   57±6
+ch5_onset_pct                            77   75±6
+final_chapter_s                        12.0   12–17
+words_per_sec                          3.62   3.6–4.2
+max_words_per_shot                       12   ≤16
+pct_medium_family                        57   60–80
+pct_wide                                 22   10–30
+pct_close                                22   5–15
+scale_change_rate                      0.73   ≥0.66
+no_cta                                 True   no CTA
+
+WARN pct_medium_family = 57 (target 60–80)
+WARN pct_close = 22 (target 5–15)
+
+0 FAIL, 2 WARN, 22 OK

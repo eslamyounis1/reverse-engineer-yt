@@ -1,22 +1,86 @@
 {
- "final": {"media_id": "522699fb-6125-46ce-ab70-56d66861dc6b",
-  "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/522699fb-6125-46ce-ab70-56d66861dc6b.mp4",
-  "duration_s": 51.37, "resolution": "1080x1920@30", "shots": 23, "mean_hold_s": 2.23,
-  "captions": {"look": "bold tiktok", "similarity": 0.949, "words": "187/187", "captions": 52},
-  "narration_tail_s": 2.05, "diegetic": "none"},
- "avatar": {"base_ref": "42fbcc4f-9cf2-4971-a73f-e3230c9b2aa8 (approved, Mars 2100)",
-  "stage_refs": {"newborn": "c3b30ceb-9bb3-43f9-b94e-7d7d6c261d12 (reused)", "child": "fb481017-5f8f-4136-8452-0cfee6f96396",
-   "teen": "048e6430-4f67-4afc-8de3-d4edbfc36957", "adult22": "765a97cd-00ac-4261-b8a1-63f5e3f62adb (reused)",
-   "adult30": "096c4764-ec4d-4e81-92bc-4e3c3c63e9e4"}},
- "images": {"prop:kite": "97771449-9f61-407b-b2f7-e20d39268a73",
-  "env:ch1": "5f888c54-18c4-40fc-898e-6e051a7fbc8d", "env:ch2": "98a1bae6-bef3-43a5-94aa-2e017a296caf",
-  "env:ch3": "a8a55784-f1a1-4b4c-a721-25119431e52c", "env:ch4": "bdc76e5a-8ee8-45f4-9615-75c62536479d",
+ "avatar": {
+  "base_ref": "42fbcc4f-9cf2-4971-a73f-e3230c9b2aa8 (approved, Mars 2100)",
+  "stage_refs": {
+   "newborn": "c3b30ceb-9bb3-43f9-b94e-7d7d6c261d12 (reused)",
+   "child": "fb481017-5f8f-4136-8452-0cfee6f96396",
+   "teen": "048e6430-4f67-4afc-8de3-d4edbfc36957",
+   "adult22": "765a97cd-00ac-4261-b8a1-63f5e3f62adb (reused)",
+   "adult30": "096c4764-ec4d-4e81-92bc-4e3c3c63e9e4"
+  }
+ },
+ "images": {
+  "prop:kite": "97771449-9f61-407b-b2f7-e20d39268a73",
+  "env:ch1": "5f888c54-18c4-40fc-898e-6e051a7fbc8d",
+  "env:ch2": "98a1bae6-bef3-43a5-94aa-2e017a296caf",
+  "env:ch3": "a8a55784-f1a1-4b4c-a721-25119431e52c",
+  "env:ch4": "bdc76e5a-8ee8-45f4-9615-75c62536479d",
   "env:ch5": "b431034e-ce97-48f5-8d4a-a1514695857b",
-  "kf:1": "87314528-3d5c-4bae-aede-40ccc49fc222", "kf:12": "c7ca0987-ebbb-4fa2-8f73-d1fbebed16b6",
-  "kf:23": "76862754-47ae-48a7-8701-a9b315a0f513"},
+  "kf:1": "87314528-3d5c-4bae-aede-40ccc49fc222",
+  "kf:12": "c7ca0987-ebbb-4fa2-8f73-d1fbebed16b6",
+  "kf:23": "76862754-47ae-48a7-8701-a9b315a0f513"
+ },
  "videos": "video_jobs.json / results.json",
- "narration": {"media_id": "a340441e-95d6-4140-87c2-6809225fd96f", "voice": "Sterling", "speech_rate": 50},
- "credits": {"balance_start": 1588.51, "balance_after_first_cut": 421.81, "spent": 1166.70,
-  "approved_estimate": 1159.6, "over_estimate": "7.1 (narration re-take at rate 50)", "user_cap": 1300},
- "qc_analysis_id": "7e84adfa-0c45-4ba6-a208-24bea95586e5"
+ "narration": {
+  "media_id": "a340441e-95d6-4140-87c2-6809225fd96f",
+  "voice": "Sterling",
+  "speech_rate": 50
+ },
+ "credits": {
+  "balance_start": 1588.51,
+  "balance_end": 73.81,
+  "spent": 1514.7,
+  "breakdown": {
+   "images": 36.5,
+   "narration": 14.2,
+   "video_first_pass": 1116,
+   "video_regen": 348
+  },
+  "approved_estimate": 1159.6,
+  "user_cap": 1300,
+  "over_cap": "214.70, approved by user for the shot-mix regeneration"
+ },
+ "first_cut": {
+  "media_id": "522699fb-6125-46ce-ab70-56d66861dc6b",
+  "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/522699fb-6125-46ce-ab70-56d66861dc6b.mp4",
+  "duration_s": 51.37,
+  "resolution": "1080x1920@30",
+  "shots": 23,
+  "mean_hold_s": 2.23,
+  "captions": {
+   "look": "bold tiktok",
+   "similarity": 0.949,
+   "words": "187/187",
+   "captions": 52
+  },
+  "narration_tail_s": 2.05,
+  "diegetic": "none",
+  "qc_analysis_id": "7e84adfa-0c45-4ba6-a208-24bea95586e5"
+ },
+ "final": {
+  "version": "v2",
+  "media_id": "53825c29-ccc3-429e-81c5-564947f0d4ff",
+  "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JKkOpZH7SUehrR7g2n1NyV75TN/53825c29-ccc3-429e-81c5-564947f0d4ff.mp4",
+  "duration_s": 51.37,
+  "resolution": "1080x1920@30",
+  "shots": 23,
+  "mean_hold_s": 2.23,
+  "captions": {
+   "look": "bold tiktok",
+   "similarity": 0.949,
+   "words": "187/187",
+   "captions": 52
+  },
+  "regenerated_shots": [
+   4,
+   6,
+   9,
+   13,
+   17,
+   18,
+   23
+  ],
+  "qc_analysis_id": "2a40b178-3336-4a88-aca4-e2867875311a",
+  "qc": "0 FAIL / 2 WARN (medium-family 57% vs 60-80; close 22% vs 5-15)"
+ }
 }

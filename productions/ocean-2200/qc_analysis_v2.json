@@ -1,0 +1,170 @@
+{
+ "ref": "ocean-2200 v2",
+ "higgsfield_analysis_id": "2a40b178-3336-4a88-aca4-e2867875311a",
+ "media_id": "53825c29-ccc3-429e-81c5-564947f0d4ff",
+ "timestamp_convention": "inclusive",
+ "note": "1 s granularity, inclusive end (scenes 7 and 22 report start==end). 23 scenes detected = 23 edited shots; audio column taken from the plan lines because the analyser's transcript split drifts by up to one clause.",
+ "scenes": [
+  {
+   "n": 1,
+   "start": 0,
+   "end": 2,
+   "shot": "Close-Up",
+   "audio": "What would happen if you were born under the ocean in 2200?"
+  },
+  {
+   "n": 2,
+   "start": 2,
+   "end": 4,
+   "shot": "Wide",
+   "audio": "Day one. You're born a hundred metres underwater."
+  },
+  {
+   "n": 3,
+   "start": 5,
+   "end": 6,
+   "shot": "Medium Close-Up",
+   "audio": "The air is helium. Your first cry is a squeak."
+  },
+  {
+   "n": 4,
+   "start": 7,
+   "end": 9,
+   "shot": "Close-Up",
+   "audio": "From the surface, your grandparents send a red kite."
+  },
+  {
+   "n": 5,
+   "start": 10,
+   "end": 11,
+   "shot": "Medium",
+   "audio": "Year six. Red is the first colour the ocean swallows."
+  },
+  {
+   "n": 6,
+   "start": 12,
+   "end": 13,
+   "shot": "Close-Up",
+   "audio": "Outside the window, your kite turns grey."
+  },
+  {
+   "n": 7,
+   "start": 14,
+   "end": 14,
+   "shot": "Wide",
+   "audio": "At school, sun lamps keep your bones strong."
+  },
+  {
+   "n": 8,
+   "start": 15,
+   "end": 17,
+   "shot": "Medium",
+   "audio": "Even the strictest teacher sounds like a cartoon."
+  },
+  {
+   "n": 9,
+   "start": 18,
+   "end": 20,
+   "shot": "Medium",
+   "audio": "Year fifteen. You visit the surface for the first time."
+  },
+  {
+   "n": 10,
+   "start": 21,
+   "end": 22,
+   "shot": "Medium",
+   "audio": "First, four days sealed in a decompression chamber."
+  },
+  {
+   "n": 11,
+   "start": 23,
+   "end": 24,
+   "shot": "Close-Up",
+   "audio": "The hatch opens. Your voice drops low."
+  },
+  {
+   "n": 12,
+   "start": 25,
+   "end": 26,
+   "shot": "Wide",
+   "audio": "The sky has no ceiling."
+  },
+  {
+   "n": 13,
+   "start": 27,
+   "end": 28,
+   "shot": "Medium",
+   "audio": "For one windy afternoon, your kite flies red."
+  },
+  {
+   "n": 14,
+   "start": 29,
+   "end": 31,
+   "shot": "Medium",
+   "audio": "Year twenty-two. A hurricane up top rips the power cables loose."
+  },
+  {
+   "n": 15,
+   "start": 32,
+   "end": 33,
+   "shot": "Wide",
+   "audio": "The domes go dark. The pumps slow down."
+  },
+  {
+   "n": 16,
+   "start": 34,
+   "end": 35,
+   "shot": "Close-Up",
+   "audio": "Then you remember how hard your kite pulled."
+  },
+  {
+   "n": 17,
+   "start": 36,
+   "end": 37,
+   "shot": "Medium Close-Up",
+   "audio": "You tie it in the deep current outside."
+  },
+  {
+   "n": 18,
+   "start": 38,
+   "end": 39,
+   "shot": "Medium",
+   "audio": "It pulls. Hard."
+  },
+  {
+   "n": 19,
+   "start": 40,
+   "end": 41,
+   "shot": "Wide",
+   "audio": "Year thirty. Fifty giant kites now fly beneath the city."
+  },
+  {
+   "n": 20,
+   "start": 42,
+   "end": 43,
+   "shot": "Medium",
+   "audio": "They never land, never stop."
+  },
+  {
+   "n": 21,
+   "start": 44,
+   "end": 45,
+   "shot": "Medium",
+   "audio": "Every light in every dome runs on them."
+  },
+  {
+   "n": 22,
+   "start": 46,
+   "end": 46,
+   "shot": "Medium",
+   "audio": "Kids still squeak your name."
+  },
+  {
+   "n": 23,
+   "start": 47,
+   "end": 50,
+   "shot": "Medium",
+   "audio": "You didn't need the sky. The ocean had wind all along."
+  }
+ ]
+}
