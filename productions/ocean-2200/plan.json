@@ -183,7 +183,8 @@
   "No draft passes (budget cap 1,300); weakest scene is regenerated in Phase 9 from the contingency.",
   "Voice: Sterling, the voice the user chose for Mars 2100 v3; speech_rate tuned to the Skill's 3.6-4.2 w/s band.",
   "Narration: rate 30 measured 2.94 w/s (too slow), re-taken at rate 50 -> 3.79 w/s after pause capping.",
-  "WARN final_chapter_s 11.8 (<12): narration-locked; final hold already at the 4.7 s window maximum of the 5 s source. Chapter 5 is still the longest chapter."
+  "WARN final_chapter_s 11.8 (<12): narration-locked; final hold already at the 4.7 s window maximum of the 5 s source. Chapter 5 is still the longest chapter.",
+  "v2: shots 4,6,9,13,17,18,23 regenerated as Medium/MCU after QC v1 measured 36% medium-family; shot 18 also fixes avatar absence at the turn. User approved exceeding the 1,300 cap for this."
  ],
  "chapters": [
   {
@@ -343,7 +344,8 @@
    "difficult": false,
    "tags": [
     "plant"
-   ]
+   ],
+   "regenerated": "v2: re-framed (QC v1 shot-mix / weakest scene)"
   },
   {
    "id": 5,
@@ -401,7 +403,8 @@
    "difficult": false,
    "tags": [
     "interrupt"
-   ]
+   ],
+   "regenerated": "v2: re-framed (QC v1 shot-mix / weakest scene)"
   },
   {
    "id": 7,
@@ -471,9 +474,7 @@
    "scale": "Medium",
    "avatar": true,
    "avatar_stage": "teen",
-   "visual_source": "KEYFRAME_REQUIRED",
-   "keyframe_reason": "chapter 3 opener: lift capsule bay",
-   "keyframe_is_establishing": true,
+   "visual_source": "DIRECT_VIDEO",
    "refs": [
     "avatar:stage:teen",
     "env:ch3",
@@ -484,7 +485,8 @@
    "camera": "locked",
    "action": "the teen avatar climbs into the capsule clutching the folded red kite, glancing up the cable into the dark",
    "difficult": false,
-   "tags": []
+   "tags": [],
+   "regenerated": "v2: re-framed (QC v1 shot-mix / weakest scene)"
   },
   {
    "id": 10,
@@ -596,7 +598,8 @@
    "camera": "low tracking",
    "action": "the teen runs along the deck and the vivid red kite leaps into the wind, tail snapping, against the blue sky",
    "difficult": false,
-   "tags": []
+   "tags": [],
+   "regenerated": "v2: re-framed (QC v1 shot-mix / weakest scene)"
   },
   {
    "id": 14,
@@ -710,7 +713,8 @@
    "camera": "handheld",
    "action": "the avatar in a dive suit and headlamp ties the kite line to a dome strut; the kite unfurls in the current",
    "difficult": false,
-   "tags": []
+   "tags": [],
+   "regenerated": "v2: re-framed (QC v1 shot-mix / weakest scene)"
   },
   {
    "id": 18,
@@ -740,7 +744,8 @@
    "tags": [
     "turn",
     "interrupt"
-   ]
+   ],
+   "regenerated": "v2: re-framed (QC v1 shot-mix / weakest scene)"
   },
   {
    "id": 19,
@@ -882,7 +887,8 @@
    "difficult": false,
    "tags": [
     "payoff"
-   ]
+   ],
+   "regenerated": "v2: re-framed (QC v1 shot-mix / weakest scene)"
   }
  ],
  "narration": {
