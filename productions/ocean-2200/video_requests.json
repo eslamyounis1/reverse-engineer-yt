@@ -1,0 +1,527 @@
+[
+ {
+  "index": 1,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "start_image",
+     "value": "87314528-3d5c-4bae-aede-40ccc49fc222"
+    }
+   ],
+   "prompt": "Medium shot continuing from the start image. Slow push-in. From 0.3s to 3.41s: newborn avatar in a padded crib pod opens its button eyes as a huge manta ray glides past the porthole; a small red diamond kite hangs folded on the crib rail. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 2,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "start_image",
+     "value": "5f888c54-18c4-40fc-898e-6e051a7fbc8d"
+    }
+   ],
+   "prompt": "Wide shot continuing from the start image. Locked-off camera. From 0.3s to 3.1s: inside the nearest lit dome window a parent lifts the swaddled newborn while a school of fish swirls past outside. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 3,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "c3b30ceb-9bb3-43f9-b94e-7d7d6c261d12"
+    },
+    {
+     "role": "image_references",
+     "value": "5f888c54-18c4-40fc-898e-6e051a7fbc8d"
+    }
+   ],
+   "prompt": "Medium Close-Up shot of the knitted wool character from the first reference, in the world of the second reference. Setting: nursery inside the dome, warm teal lamps, pressure gauge reading 11 atm on the wall. Locked-off camera. From 0.3s to 3.1s: the newborn in a parent's arms opens its mouth to cry and two nurses behind cover their mouths, giggling. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 4,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "c3b30ceb-9bb3-43f9-b94e-7d7d6c261d12"
+    },
+    {
+     "role": "image_references",
+     "value": "97771449-9f61-407b-b2f7-e20d39268a73"
+    },
+    {
+     "role": "image_references",
+     "value": "5f888c54-18c4-40fc-898e-6e051a7fbc8d"
+    }
+   ],
+   "prompt": "Medium shot of the knitted wool character from the first reference with the red kite from the second reference, in the world of the third reference. Setting: nursery, a small pressure-lock delivery hatch in the wall. Slow push-in. From 0.3s to 3.64s: a parent unwraps a bright red diamond kite from a delivery canister and holds it above the crib; the newborn reaches for its tail. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 5,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "start_image",
+     "value": "98a1bae6-bef3-43a5-94aa-2e017a296caf"
+    }
+   ],
+   "prompt": "Medium shot continuing from the start image. Locked-off camera. From 0.3s to 3.04s: the six-year-old avatar presses the red kite against the big window, the blue water beyond it. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 6,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "fb481017-5f8f-4136-8452-0cfee6f96396"
+    },
+    {
+     "role": "image_references",
+     "value": "98a1bae6-bef3-43a5-94aa-2e017a296caf"
+    },
+    {
+     "role": "image_references",
+     "value": "97771449-9f61-407b-b2f7-e20d39268a73"
+    }
+   ],
+   "prompt": "Medium shot of the knitted wool character from the first reference, in the world of the second reference. Setting: open water just outside the dome, everything tinted deep blue. Camera follows from behind. From 0.3s to 2.98s: the child in a small dive suit swims out holding the kite, which looks dull grey-blue in the water; the child frowns at it. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 7,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "fb481017-5f8f-4136-8452-0cfee6f96396"
+    },
+    {
+     "role": "image_references",
+     "value": "98a1bae6-bef3-43a5-94aa-2e017a296caf"
+    }
+   ],
+   "prompt": "Wide shot of the knitted wool character from the first reference, in the world of the second reference. Setting: classroom under rows of glowing violet-white sun lamps, kids in tinted goggles. Locked-off camera. From 0.3s to 2.54s: a row of kids in goggles bask under glowing lamps; the avatar in the middle stretches its arms like a sunbather. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 8,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "fb481017-5f8f-4136-8452-0cfee6f96396"
+    },
+    {
+     "role": "image_references",
+     "value": "98a1bae6-bef3-43a5-94aa-2e017a296caf"
+    }
+   ],
+   "prompt": "Medium Close-Up shot of the knitted wool character from the first reference, in the world of the second reference. Setting: classroom, a stern tall teacher at the front. Locked-off camera. From 0.3s to 3.48s: the stern teacher speaks and the avatar and classmates burst into laughter, the avatar covering its mouth. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 9,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "start_image",
+     "value": "a8a55784-f1a1-4b4c-a721-25119431e52c"
+    }
+   ],
+   "prompt": "Medium shot continuing from the start image. Locked-off camera. From 0.3s to 3.74s: the teen avatar climbs into the capsule clutching the folded red kite, glancing up the cable into the dark. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 10,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "048e6430-4f67-4afc-8de3-d4edbfc36957"
+    },
+    {
+     "role": "image_references",
+     "value": "a8a55784-f1a1-4b4c-a721-25119431e52c"
+    }
+   ],
+   "prompt": "Medium shot of the knitted wool character from the first reference, in the world of the second reference. Setting: cramped round decompression chamber, bunk, gauge on the wall. Locked-off camera. From 0.3s to 3.48s: the bored teen lies on a bunk and scratches a fourth tally mark on the wall as a gauge needle creeps down. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 11,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "048e6430-4f67-4afc-8de3-d4edbfc36957"
+    },
+    {
+     "role": "image_references",
+     "value": "a8a55784-f1a1-4b4c-a721-25119431e52c"
+    }
+   ],
+   "prompt": "Close-Up shot of the knitted wool character from the first reference, in the world of the second reference. Setting: chamber hatch swinging open onto blinding daylight. Slow push-in. From 0.3s to 2.9s: the hatch swings open and bright daylight floods the teen's face; it squints and its button eyes go wide. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 12,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "start_image",
+     "value": "c7ca0987-ebbb-4fa2-8f73-d1fbebed16b6"
+    }
+   ],
+   "prompt": "Wide shot continuing from the start image. Locked-off camera. From 0.3s to 2.1s: the tiny teen avatar stands at the deck rail and slowly tilts its head back to take in the endless sky. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 13,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "048e6430-4f67-4afc-8de3-d4edbfc36957"
+    },
+    {
+     "role": "image_references",
+     "value": "97771449-9f61-407b-b2f7-e20d39268a73"
+    },
+    {
+     "role": "image_references",
+     "value": "a8a55784-f1a1-4b4c-a721-25119431e52c"
+    }
+   ],
+   "prompt": "Medium shot of the knitted wool character from the first reference with the red kite from the second reference, in the world of the third reference. Setting: floating platform deck, bright sky, wind. Low tracking camera. From 0.3s to 3.42s: the teen runs along the deck and the vivid red kite leaps into the wind, tail snapping, against the blue sky. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 14,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "start_image",
+     "value": "bdc76e5a-8ee8-45f4-9615-75c62536479d"
+    }
+   ],
+   "prompt": "Medium shot continuing from the start image. Locked-off camera. From 0.3s to 3.88s: the adult avatar grips the console as the monitor shows giant waves snapping the floating power cables. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 15,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "765a97cd-00ac-4261-b8a1-63f5e3f62adb"
+    },
+    {
+     "role": "image_references",
+     "value": "bdc76e5a-8ee8-45f4-9615-75c62536479d"
+    }
+   ],
+   "prompt": "Wide shot of the knitted wool character from the first reference, in the world of the second reference. Setting: the seafloor city from outside, dome lights going out one by one. Locked-off camera. From 0.3s to 3.12s: dome lights blink out one by one across the city until only the avatar's flashlight glows in one window. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 16,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "765a97cd-00ac-4261-b8a1-63f5e3f62adb"
+    },
+    {
+     "role": "image_references",
+     "value": "97771449-9f61-407b-b2f7-e20d39268a73"
+    },
+    {
+     "role": "image_references",
+     "value": "bdc76e5a-8ee8-45f4-9615-75c62536479d"
+    }
+   ],
+   "prompt": "Close-Up shot of the knitted wool character from the first reference with the red kite from the second reference, in the world of the third reference. Setting: dark quarters lit by a flashlight. Slow push-in. From 0.3s to 2.8s: the avatar's hands lift the faded old red kite off a shelf in the flashlight beam. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 17,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "765a97cd-00ac-4261-b8a1-63f5e3f62adb"
+    },
+    {
+     "role": "image_references",
+     "value": "bdc76e5a-8ee8-45f4-9615-75c62536479d"
+    },
+    {
+     "role": "image_references",
+     "value": "97771449-9f61-407b-b2f7-e20d39268a73"
+    }
+   ],
+   "prompt": "Medium shot of the knitted wool character from the first reference, in the world of the second reference. Setting: outside the dome in dark blue water, a dome strut, drifting particles in a strong current. Gentle handheld camera. From 0.3s to 2.6s: the avatar in a dive suit and headlamp ties the kite line to a dome strut; the kite unfurls in the current. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 18,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "765a97cd-00ac-4261-b8a1-63f5e3f62adb"
+    },
+    {
+     "role": "image_references",
+     "value": "bdc76e5a-8ee8-45f4-9615-75c62536479d"
+    },
+    {
+     "role": "image_references",
+     "value": "97771449-9f61-407b-b2f7-e20d39268a73"
+    }
+   ],
+   "prompt": "Medium Close-Up shot of the knitted wool character from the first reference, in the world of the second reference. Setting: a small spinning generator hub on the dome strut, one dome lamp beside it. Slow push-in. From 0.3s to 2.46s: the kite line snaps taut, a small generator hub spins up and the lamp beside the avatar flickers on, lighting its wide button eyes. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 19,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "start_image",
+     "value": "b431034e-ce97-48f5-8d4a-a1514695857b"
+    }
+   ],
+   "prompt": "Wide shot continuing from the start image. Locked-off camera. From 0.3s to 3.66s: the adult avatar stands on a lit lookout platform as giant red kites sweep slow figure-eights below. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 20,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "096c4764-ec4d-4e81-92bc-4e3c3c63e9e4"
+    },
+    {
+     "role": "image_references",
+     "value": "b431034e-ce97-48f5-8d4a-a1514695857b"
+    },
+    {
+     "role": "image_references",
+     "value": "97771449-9f61-407b-b2f7-e20d39268a73"
+    }
+   ],
+   "prompt": "Medium shot of the knitted wool character from the first reference, in the world of the second reference. Setting: open water beside a giant red underwater kite. Low tracking camera. From 0.3s to 2.18s: the avatar pilots a small bubble-canopy sub alongside a giant red kite as it sweeps past. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 21,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "096c4764-ec4d-4e81-92bc-4e3c3c63e9e4"
+    },
+    {
+     "role": "image_references",
+     "value": "b431034e-ce97-48f5-8d4a-a1514695857b"
+    }
+   ],
+   "prompt": "Wide shot of the knitted wool character from the first reference, in the world of the second reference. Setting: the whole seafloor city glowing warmly, walkways lit. Locked-off camera. From 0.3s to 2.66s: the avatar walks a lit tube walkway as dome after dome glows warm around it. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 22,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 4,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "image_references",
+     "value": "096c4764-ec4d-4e81-92bc-4e3c3c63e9e4"
+    },
+    {
+     "role": "image_references",
+     "value": "b431034e-ce97-48f5-8d4a-a1514695857b"
+    }
+   ],
+   "prompt": "Medium shot of the knitted wool character from the first reference, in the world of the second reference. Setting: busy dome corridor with children. Locked-off camera. From 0.3s to 2.22s: a group of kids run past waving and laughing at the avatar, who waves back with a grin. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ },
+ {
+  "index": 23,
+  "params": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "aspect_ratio": "9:16",
+   "resolution": "1080p",
+   "duration": 5,
+   "generate_audio": false,
+   "medias": [
+    {
+     "role": "start_image",
+     "value": "76862754-47ae-48a7-8701-a9b315a0f513"
+    }
+   ],
+   "prompt": "Medium shot continuing from the start image. Slow push-in. From 0.3s to 5s: the avatar holds the small faded red kite at the window as a giant glowing red kite sweeps past outside. After that the motion settles and holds. Stylized 3D animated feature-film look, cinematic motivated lighting, rich saturated colour. The knitted wool character keeps its exact design: cream wool, glossy green button eyes, sunflower-yellow pom-pom beanie. Single continuous shot, no cuts, no text, no subtitles.",
+   "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  }
+ }
+]

@@ -1,0 +1,142 @@
+{
+ "note": "Call each tool once with params (single tool, not *_batch). Video uses mode t2v as the price probe; re-check one omni_reference item before the video batch (SKILL.md Phase 7).",
+ "preflight": [
+  {
+   "key": "img:flare:high:2k",
+   "group": "image",
+   "tool": "generate_image",
+   "params": {
+    "model": "gpt_image_2_5",
+    "aspect_ratio": "9:16",
+    "prompt": "cost preflight",
+    "get_cost": true,
+    "variant": "flare",
+    "quality": "high",
+    "resolution": "2k"
+   }
+  },
+  {
+   "key": "img:sunburst:high:2k",
+   "group": "image",
+   "tool": "generate_image",
+   "params": {
+    "model": "gpt_image_2_5",
+    "aspect_ratio": "9:16",
+    "prompt": "cost preflight",
+    "get_cost": true,
+    "variant": "sunburst",
+    "quality": "high",
+    "resolution": "2k"
+   }
+  },
+  {
+   "key": "img:flare:xhigh:2k",
+   "group": "image",
+   "tool": "generate_image",
+   "params": {
+    "model": "gpt_image_2_5",
+    "aspect_ratio": "9:16",
+    "prompt": "cost preflight",
+    "get_cost": true,
+    "variant": "flare",
+    "quality": "xhigh",
+    "resolution": "2k"
+   }
+  },
+  {
+   "key": "vid:4s:1080p:final:audio=false",
+   "group": "video",
+   "tool": "generate_video",
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "t2v",
+    "aspect_ratio": "9:16",
+    "duration": 4,
+    "generate_audio": false,
+    "prompt": "cost preflight",
+    "get_cost": true,
+    "resolution": "1080p"
+   }
+  },
+  {
+   "key": "vid:5s:1080p:final:audio=false",
+   "group": "video",
+   "tool": "generate_video",
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "t2v",
+    "aspect_ratio": "9:16",
+    "duration": 5,
+    "generate_audio": false,
+    "prompt": "cost preflight",
+    "get_cost": true,
+    "resolution": "1080p"
+   }
+  },
+  {
+   "key": "tts:ch1",
+   "group": "narration",
+   "tool": "generate_audio",
+   "params": {
+    "model": "seed_audio",
+    "prompt": "What would happen if you were born under the ocean in 2200? Day one. You're born a hundred metres underwater. The air is helium. Your first cry is a squeak. From the surface, your grandparents send a red kite.",
+    "speech_rate": 30,
+    "get_cost": true,
+    "voice_type": "preset",
+    "voice_id": "dc382508-c8bd-443c-8cb2-46e57b8d2e6f"
+   }
+  },
+  {
+   "key": "tts:ch2",
+   "group": "narration",
+   "tool": "generate_audio",
+   "params": {
+    "model": "seed_audio",
+    "prompt": "Year six. Red is the first colour the ocean swallows. Outside the window, your kite turns grey. At school, sun lamps keep your bones strong. Even the strictest teacher sounds like a cartoon.",
+    "speech_rate": 30,
+    "get_cost": true,
+    "voice_type": "preset",
+    "voice_id": "dc382508-c8bd-443c-8cb2-46e57b8d2e6f"
+   }
+  },
+  {
+   "key": "tts:ch3",
+   "group": "narration",
+   "tool": "generate_audio",
+   "params": {
+    "model": "seed_audio",
+    "prompt": "Year fifteen. You visit the surface for the first time. First, four days sealed in a decompression chamber. The hatch opens. Your voice drops low. The sky has no ceiling. For one windy afternoon, your kite flies red.",
+    "speech_rate": 30,
+    "get_cost": true,
+    "voice_type": "preset",
+    "voice_id": "dc382508-c8bd-443c-8cb2-46e57b8d2e6f"
+   }
+  },
+  {
+   "key": "tts:ch4",
+   "group": "narration",
+   "tool": "generate_audio",
+   "params": {
+    "model": "seed_audio",
+    "prompt": "Year twenty-two. A hurricane up top rips the power cables loose. The domes go dark. The pumps slow down. Then you remember how hard your kite pulled. You tie it in the deep current outside. It pulls. Hard.",
+    "speech_rate": 30,
+    "get_cost": true,
+    "voice_type": "preset",
+    "voice_id": "dc382508-c8bd-443c-8cb2-46e57b8d2e6f"
+   }
+  },
+  {
+   "key": "tts:ch5",
+   "group": "narration",
+   "tool": "generate_audio",
+   "params": {
+    "model": "seed_audio",
+    "prompt": "Year thirty. Fifty giant kites now fly beneath the city. They never land, never stop. Every light in every dome runs on them. Kids still squeak your name. You didn't need the sky. The ocean had wind all along.",
+    "speech_rate": 30,
+    "get_cost": true,
+    "voice_type": "preset",
+    "voice_id": "dc382508-c8bd-443c-8cb2-46e57b8d2e6f"
+   }
+  }
+ ]
+}

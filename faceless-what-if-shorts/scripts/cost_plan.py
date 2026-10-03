@@ -26,14 +26,19 @@ CONTINGENCY = 0.20  # retries / regeneration of the weakest scene, shown as a se
 
 def image_jobs(plan):
     """(key, params, count, what) for every planned GPT Image 2.5 job."""
-    n_stages = len(plan.get("avatar", {}).get("spec", {}).get("stage_changes", [])) or 5
+    avatar = plan.get("avatar", {})
+    ref = avatar.get("reference", {})
+    n_stages = len(avatar.get("spec", {}).get("stage_changes", [])) or 5
+    # A recurring avatar whose approved reference / stage frames already exist is not billed again.
+    n_base = 0 if ref.get("job_id") and ref.get("approved_by_user") else 1
+    n_stages = max(0, n_stages - len(ref.get("stage_refs") or {}))
     shots = plan["shots"]
     # Chapter-opener shots whose keyframe IS the Phase-4 establishing frame are not billed twice.
     kf = [s for s in shots if s.get("visual_source") == "KEYFRAME_REQUIRED"
           and not s.get("keyframe_is_establishing")]
     hero = [s for s in kf if set(s.get("tags", [])) & {"hook", "payoff"}]
     jobs = [
-        ("img:flare:high:2k", {"variant": "flare", "quality": "high", "resolution": "2k"}, 1, "avatar base reference"),
+        ("img:flare:high:2k", {"variant": "flare", "quality": "high", "resolution": "2k"}, n_base, "avatar base reference"),
         ("img:sunburst:high:2k", {"variant": "sunburst", "quality": "high", "resolution": "2k"}, n_stages,
          "avatar stage frames (edits of the approved reference)"),
         ("img:flare:high:2k", {"variant": "flare", "quality": "high", "resolution": "2k"}, 1, "signature prop"),
