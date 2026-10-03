@@ -178,7 +178,7 @@ def main(argv):
     if narr > vdur + 0.05:
         raise SystemExit(f"narration {narr:.2f}s longer than picture {vdur:.2f}s: extend final shot dur")
 
-    narr_chain = f"[1:a]loudnorm=I={lufs}:TP=-1.5:LRA=11,aresample=48000,apad=whole_dur={vdur:.3f}"
+    narr_chain = f"[1:a]loudnorm=I={lufs}:TP=-1.5:LRA=11,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=mono,apad=whole_dur={vdur:.3f}"
     sfx_peak = narr_peak = None
     if diegetic_n:
         with open("segs/alist.txt", "w") as f:
